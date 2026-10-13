@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-page-canvas" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Masuk &amp; Registrasi Portal - VenueConnect Polinela</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config verbatim from Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary": "#034436",
+            "on-secondary": "#ffffff",
+            "surface-variant": "#d8e4f1",
+            "on-secondary-fixed-variant": "#2a4d44",
+            "secondary-fixed-dim": "#a8cfc2",
+            "primary-container": "#245c4d",
+            "surface-container-low": "#ebf5ff",
+            "status-muted-surface": "#F3F4F6",
+            "page-canvas": "#F6F8F7",
+            "on-tertiary-fixed-variant": "#005140",
+            "status-success": "#0E6245",
+            "on-secondary-container": "#466a5f",
+            "surface": "#f6f9ff",
+            "status-success-surface": "#DEF7EC",
+            "on-primary-fixed": "#002018",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#404945",
+            "on-secondary-fixed": "#002019",
+            "border-subtle": "#D8E0E5",
+            "surface-white": "#FFFFFF",
+            "surface-dim": "#cfdbe8",
+            "accent-warm": "#B7791F",
+            "inverse-primary": "#99d2bf",
+            "secondary-fixed": "#c4ebde",
+            "status-info": "#1E429F",
+            "surface-bright": "#f6f9ff",
+            "status-warning": "#8F4B0E",
+            "on-primary-container": "#99d2bf",
+            "surface-container": "#e3effc",
+            "on-error": "#ffffff",
+            "on-primary": "#ffffff",
+            "status-info-surface": "#EBF5FF",
+            "status-warning-surface": "#FEF08A",
+            "inverse-on-surface": "#e6f2ff",
+            "tertiary-container": "#0f5e4b",
+            "primary-fixed-dim": "#99d2bf",
+            "brand-surface-tint": "#E8F2EE",
+            "status-muted": "#4B5563",
+            "inverse-surface": "#26323b",
+            "secondary": "#42655b",
+            "secondary-container": "#c1e8db",
+            "on-surface": "#111d26",
+            "outline-variant": "#bfc9c4",
+            "outline": "#707975",
+            "status-danger": "#9B1C1C",
+            "surface-container-high": "#ddeaf7",
+            "surface-tint": "#316858",
+            "text-main": "#1F2933",
+            "primary-fixed": "#b5eedb",
+            "tertiary-fixed": "#a9f1d8",
+            "error-container": "#ffdad6",
+            "surface-container-highest": "#d8e4f1",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#8ed4bc",
+            "on-primary-fixed-variant": "#155041",
+            "on-background": "#111d26",
+            "on-error-container": "#93000a",
+            "background": "#f6f9ff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed": "#002018",
+            "accent-warm-surface": "#FFF4D6",
+            "status-danger-surface": "#FDE8E8",
+            "tertiary": "#004536",
+            "on-tertiary-container": "#8ed5bd"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "1rem",
+            "margin": "2rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "margin-mobile": "1rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Inter"],
+            "headline-xl-mobile": ["Inter"],
+            "headline-xl": ["Inter"],
+            "headline-lg-mobile": ["Inter"],
+            "label-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "caption": ["Inter"],
+            "headline-sm": ["Inter"],
+            "headline-md": ["Inter"],
+            "headline-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "body-lg-medium": ["Inter"],
+            "body-sm-medium": ["Inter"]
+          },
+          "fontSize": {
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-lg-medium": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "body-sm-medium": ["14px", { "lineHeight": "20px", "fontWeight": "500" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-full flex flex-col bg-page-canvas text-text-main font-body-sm antialiased selection:bg-brand-surface-tint selection:text-primary">
+<!-- TOP APP BAR (Shared Component Anchor) -->
+<header class="bg-surface-white dark:bg-inverse-surface border-b border-border-subtle dark:border-outline-variant shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<div class="max-w-[1200px] mx-auto px-4 lg:px-6 h-16 flex items-center justify-between w-full">
+<!-- Brand Anchor -->
+<div class="flex items-center gap-4">
+<a class="flex items-center gap-2 group" href="#">
+<div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[22px]">domain</span>
+</div>
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm text-primary dark:text-inverse-primary tracking-tight">VenueConnect Polinela</span>
+<span class="text-caption font-caption text-status-muted">UPT Fasilitas &amp; Sarana Kampus</span>
+</div>
+</a>
+</div>
+<!-- Navigation Links -->
+<nav aria-label="Navigasi Utama" class="hidden md:flex items-center gap-6">
+<a class="text-text-main dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-body-sm-medium text-body-sm-medium hover:bg-brand-surface-tint dark:hover:bg-surface-variant transition-colors duration-150 px-2 py-1 rounded" href="#">Gedung</a>
+<a class="text-text-main dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-body-sm-medium text-body-sm-medium hover:bg-brand-surface-tint dark:hover:bg-surface-variant transition-colors duration-150 px-2 py-1 rounded" href="#">Jadwal</a>
+<a class="text-text-main dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-body-sm-medium text-body-sm-medium hover:bg-brand-surface-tint dark:hover:bg-surface-variant transition-colors duration-150 px-2 py-1 rounded" href="#">Prosedur</a>
+<a class="text-text-main dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-body-sm-medium text-body-sm-medium hover:bg-brand-surface-tint dark:hover:bg-surface-variant transition-colors duration-150 px-2 py-1 rounded" href="#">Bantuan/AI</a>
+</nav>
+<!-- Trailing Action Anchor: Masuk is active here -->
+<div class="flex items-center gap-2">
+<a class="text-status-muted hover:text-primary p-2 rounded-lg hover:bg-brand-surface-tint transition-colors" href="#" title="Bantuan">
+<span class="material-symbols-outlined text-[20px]">help</span>
+</a>
+<a class="text-status-muted hover:text-primary p-2 rounded-lg hover:bg-brand-surface-tint transition-colors" href="#" title="Notifikasi">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</a>
+<a class="text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary font-body-lg-medium text-body-lg-medium pb-1 px-2 flex items-center gap-1.5 active:scale-[0.98] transition-transform duration-100" href="#">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>Masuk</span>
+</a>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS: Centered Authentication Layout -->
+<main class="flex-1 max-w-[1200px] w-full mx-auto px-4 lg:px-6 py-8 md:py-12 flex flex-col justify-center">
+<!-- Breadcrumb / Kembali Navigation -->
+<div class="mb-6 flex items-center justify-between">
+<a class="inline-flex items-center gap-1.5 text-status-muted hover:text-primary font-body-sm-medium text-body-sm-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Kembali ke Beranda &amp; Katalog Gedung</span>
+</a>
+<span class="hidden sm:inline-flex items-center gap-1 text-caption font-caption text-status-muted bg-surface-white px-2.5 py-1 rounded-full border border-border-subtle">
+<span class="material-symbols-outlined text-[14px] text-status-success">verified_user</span>
+        Enkripsi TLS 1.3 Terverifikasi
+      </span>
+</div>
+<!-- AUTHENTICATION CONTAINER: Two-side Card (Bento/Split Pattern) -->
+<div class="bg-surface-white border border-border-subtle rounded-xl shadow-[0_1px_3px_0_rgba(31,41,51,0.04),0_1px_2px_-1px_rgba(31,41,51,0.04)] overflow-hidden grid grid-cols-1 lg:grid-cols-12 min-h-[580px]">
+<!-- SISI KIRI: Branding & Informasi Layanan Kampus (Cols 5 on desktop) -->
+<section class="lg:col-span-5 bg-gradient-to-b from-[#194237] to-primary p-6 md:p-8 lg:p-10 text-on-primary flex flex-col justify-between relative overflow-hidden">
+<!-- Subtle Institutional Pattern Decoration -->
+<div class="absolute -right-16 -top-16 w-56 h-56 rounded-full bg-secondary-container/10 pointer-events-none blur-2xl"></div>
+<div class="absolute -left-12 -bottom-12 w-48 h-48 rounded-full bg-accent-warm/15 pointer-events-none blur-2xl"></div>
+<div class="relative z-10 space-y-6">
+<!-- Institutional Badge -->
+<div class="inline-flex items-center gap-2 bg-on-primary/10 border border-on-primary/20 backdrop-blur-sm px-3 py-1.5 rounded-full text-caption font-caption text-on-primary">
+<span class="material-symbols-outlined text-[15px] text-on-primary-container">account_balance</span>
+<span>Portal Resmi Politeknik Negeri Lampung</span>
+</div>
+<!-- Main Title & Description -->
+<div class="space-y-3">
+<h1 class="text-headline-lg font-headline-lg text-on-primary leading-tight">
+              Satu Pintu Layanan Sarana &amp; Gedung Kampus Polinela
+            </h1>
+<p class="text-body-sm font-body-sm text-surface-variant/90 leading-relaxed">
+              Fasilitas penunjang Tridharma Perguruan Tinggi, ruang kolaborasi organisasi mahasiswa (ormawa), serta pelayanan peminjaman resmi bagi mitra eksternal terpadu.
+            </p>
+</div>
+<!-- 3 Poin Keunggulan Sistem -->
+<div class="space-y-4 pt-2">
+<!-- Poin 1 -->
+<div class="flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-on-primary/10 flex-shrink-0 flex items-center justify-center text-on-primary-container mt-0.5">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</div>
+<div>
+<h2 class="text-label-md font-label-md text-on-primary">Jadwal Waktu Nyata Bebas Bentrok</h2>
+<p class="text-caption font-caption text-surface-variant/80 mt-0.5">Visibilitas ketersediaan aula, auditorium, dan laboratorium secara transparan 24 jam.</p>
+</div>
+</div>
+<!-- Poin 2 -->
+<div class="flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-on-primary/10 flex-shrink-0 flex items-center justify-center text-on-primary-container mt-0.5">
+<span class="material-symbols-outlined text-[18px]">task_alt</span>
+</div>
+<div>
+<h2 class="text-label-md font-label-md text-on-primary">Verifikasi Digital Tanpa Berkas Fisik</h2>
+<p class="text-caption font-caption text-surface-variant/80 mt-0.5">Unggah proposal dan rekomendasi pimpinan unit secara digital tanpa birokrasi berulang.</p>
+</div>
+</div>
+<!-- Poin 3 -->
+<div class="flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-on-primary/10 flex-shrink-0 flex items-center justify-center text-on-primary-container mt-0.5">
+<span class="material-symbols-outlined text-[18px]">update</span>
+</div>
+<div>
+<h2 class="text-label-md font-label-md text-on-primary">Pemantauan Terintegrasi WIB</h2>
+<p class="text-caption font-caption text-surface-variant/80 mt-0.5">Pemberitahuan tahapan disposisi UPT Sarpras terstandardisasi dengan penanda waktu resmi.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Catatan Keamanan Sivitas -->
+<div class="relative z-10 pt-8 mt-6 border-t border-on-primary/15">
+<div class="flex items-center gap-2.5 text-caption font-caption text-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">shield_lock</span>
+<span>Dilindungi standar privasi data sivitas akademika Politeknik Negeri Lampung.</span>
+</div>
+</div>
+</section>
+<!-- SISI KANAN: Formulir Masuk & Jalur Pengguna (Cols 7 on desktop) -->
+<section class="lg:col-span-7 p-6 md:p-8 lg:p-10 flex flex-col justify-between bg-surface-white">
+<div>
+<!-- Header Bagian Form -->
+<div class="flex items-center justify-between mb-6">
+<div>
+<h2 class="text-headline-md font-headline-md text-text-main">Pilih Jalur Akses Masuk</h2>
+<p class="text-body-sm font-body-sm text-status-muted mt-1">Silakan pilih jenis akun yang sesuai dengan status permohonan Anda.</p>
+</div>
+<div class="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-status-success-surface text-status-success text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Portal Aktif</span>
+</div>
+</div>
+<!-- Tab Switcher Segmented Control -->
+<div class="p-1 bg-page-canvas rounded-lg border border-border-subtle flex gap-1 mb-6">
+<button class="flex-1 py-2.5 px-3 rounded-md text-label-md font-label-md text-primary bg-surface-white shadow-sm border border-border-subtle transition-all duration-150 flex items-center justify-center gap-2" id="tab-sso-btn" onclick="switchAuthTab('sso')" type="button">
+<span class="material-symbols-outlined text-[18px]">school</span>
+<span>Sivitas Kampus (SSO)</span>
+</button>
+<button class="flex-1 py-2.5 px-3 rounded-md text-label-md font-label-md text-status-muted hover:text-text-main transition-all duration-150 flex items-center justify-center gap-2" id="tab-public-btn" onclick="switchAuthTab('public')" type="button">
+<span class="material-symbols-outlined text-[18px]">corporate_fare</span>
+<span>Mitra Eksternal / Publik</span>
+</button>
+</div>
+<!-- TAB PANEL 1: Sivitas Kampus (SSO) -->
+<div class="space-y-6" id="panel-sso">
+<!-- SSO Instructional Card -->
+<div class="p-5 rounded-lg border border-border-subtle bg-brand-surface-tint/40 flex flex-col gap-3">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">badge</span>
+</div>
+<div>
+<h3 class="text-label-md font-label-md text-primary">Autentikasi Terpusat Polinela (SSO)</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">
+                    Gunakan akun resmi <strong class="text-text-main font-body-sm-medium">@polinela.ac.id</strong> yang terdaftar di sistem kampus untuk mahasiswa, dosen, tenaga kependidikan, serta pengurus ormawa.
+                  </p>
+</div>
+</div>
+<div class="flex items-center gap-2 text-caption font-caption text-status-muted pt-2 border-t border-border-subtle">
+<span class="material-symbols-outlined text-[15px] text-accent-warm">info</span>
+<span>Otoritas otomatis mengenali peran akademik Anda tanpa unggah kartu identitas fisik.</span>
+</div>
+</div>
+<!-- Primary SSO Action Button (min-height 44px, WCAG AA compliant) -->
+<div class="space-y-3">
+<a class="w-full min-h-[44px] px-5 py-3 rounded-lg bg-primary hover:bg-[#173B32] text-surface-white font-label-md text-label-md flex items-center justify-center gap-2.5 shadow-sm active:scale-[0.98] transition-all duration-150 group" href="#">
+<span class="material-symbols-outlined text-[20px] text-inverse-primary group-hover:scale-110 transition-transform">login</span>
+<span>Masuk dengan Akun Kampus Polinela (SSO)</span>
+</a>
+<div class="flex items-center justify-between text-body-sm font-body-sm pt-2">
+<a class="text-primary hover:underline inline-flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">lock_reset</span>
+<span>Kendala Sandi SSO?</span>
+</a>
+<a class="text-primary hover:underline inline-flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">how_to_reg</span>
+<span>Aktivasi Akun Mahasiswa Baru</span>
+</a>
+</div>
+</div>
+</div>
+<!-- TAB PANEL 2: Mitra Eksternal / Publik -->
+<div class="space-y-5 hidden" id="panel-public">
+<form class="space-y-4" onsubmit="event.preventDefault();">
+<!-- Field Email -->
+<div>
+<label class="block text-label-md font-label-md text-text-main mb-1.5" for="public-email">
+                  Email Lembaga / Personal <span class="text-status-danger">*</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-status-muted">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</div>
+<input class="w-full min-h-[44px] pl-10 pr-3.5 py-2.5 rounded-lg border border-border-subtle bg-surface-white text-text-main placeholder-outline text-body-sm font-body-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" id="public-email" placeholder="nama@instansi.id atau email@domain.com" required="" type="email"/>
+</div>
+</div>
+<!-- Field Kata Sandi -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="block text-label-md font-label-md text-text-main" for="public-password">
+                    Kata Sandi <span class="text-status-danger">*</span>
+</label>
+<a class="text-caption font-caption text-primary hover:underline" href="#">Lupa sandi?</a>
+</div>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-status-muted">
+<span class="material-symbols-outlined text-[18px]">key</span>
+</div>
+<input class="w-full min-h-[44px] pl-10 pr-11 py-2.5 rounded-lg border border-border-subtle bg-surface-white text-text-main placeholder-outline text-body-sm font-body-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" id="public-password" placeholder="Masukkan kata sandi terdaftar" required="" type="password"/>
+<button class="absolute inset-y-0 right-0 pr-3 flex items-center text-status-muted hover:text-text-main" onclick="togglePasswordVisibility()" title="Tampilkan sandi" type="button">
+<span class="material-symbols-outlined text-[18px]" id="pw-visibility-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Ingat Sesi & Persyaratan -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input class="w-4 h-4 rounded text-primary border-border-subtle focus:ring-primary" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-status-muted">Ingat sesi di peramban ini</span>
+</label>
+</div>
+<!-- Submit Button Mitra Publik -->
+<button class="w-full min-h-[44px] px-5 py-2.5 rounded-lg bg-primary hover:bg-[#173B32] text-surface-white font-label-md text-label-md flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-all duration-150" type="submit">
+<span class="material-symbols-outlined text-[18px]">login</span>
+<span>Masuk sebagai Mitra Publik</span>
+</button>
+</form>
+<!-- Tautan Registrasi Mitra -->
+<div class="p-3.5 rounded-lg bg-page-canvas border border-border-subtle flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-status-muted">Belum memiliki akun mitra?</span>
+<a class="text-primary font-body-sm-medium text-body-sm-medium hover:underline inline-flex items-center gap-1" href="#">
+<span>Daftarkan Lembaga / Organisasi</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- BANNER INFORMASI KEAMANAN & PRIVASI (Neutral & Confident) -->
+<div class="mt-6 p-3.5 rounded-lg bg-surface-container-low border border-border-subtle flex items-start gap-3">
+<span class="material-symbols-outlined text-[20px] text-status-info flex-shrink-0 mt-0.5">verified</span>
+<p class="text-caption font-caption text-text-main leading-relaxed">
+<strong class="font-label-sm text-status-info">Prinsip Minimalisasi Data:</strong> Sistem tidak meminta dokumen kependudukan pribadi pada tahap masuk. Verifikasi legalitas kegiatan dilakukan saat pengajuan proposal resmi.
+            </p>
+</div>
+</div>
+<!-- Helpdesk & Dukungan UPT Footer Area -->
+<div class="pt-6 mt-6 border-t border-border-subtle flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-caption font-caption text-status-muted">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+<span>Kendala akses sistem? Hubungi <strong class="text-text-main font-body-sm-medium">Helpdesk UPT Fasilitas Polinela</strong></span>
+</div>
+<a class="text-primary hover:underline inline-flex items-center gap-1" href="#">
+<span>Panduan Tiket Bantuan</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</section>
+</div>
+<!-- Petunjuk Singkat Bantuan Cepat -->
+<div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-surface-white border border-border-subtle rounded-xl p-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-status-info-surface text-status-info flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+</div>
+<div>
+<h4 class="text-label-md font-label-md text-text-main">Panduan SOP Peminjaman</h4>
+<p class="text-caption font-caption text-status-muted">Unduh alur resmi pengajuan gedung kampus</p>
+</div>
+</div>
+<div class="bg-surface-white border border-border-subtle rounded-xl p-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-status-success-surface text-status-success flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</div>
+<div>
+<h4 class="text-label-md font-label-md text-text-main">Cek Kalender Terbuka</h4>
+<p class="text-caption font-caption text-status-muted">Lihat jadwal okupansi sebelum menyusun izin</p>
+</div>
+</div>
+<div class="bg-surface-white border border-border-subtle rounded-xl p-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-accent-warm-surface text-accent-warm flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">contact_support</span>
+</div>
+<div>
+<h4 class="text-label-md font-label-md text-text-main">WhatsApp Layanan UPT</h4>
+<p class="text-caption font-caption text-status-muted">Senin - Jumat (08.00 - 16.00 WIB)</p>
+</div>
+</div>
+</div>
+</main>
+<!-- INSTITUTIONAL FOOTER (Shared Component Anchor) -->
+<footer class="bg-page-canvas dark:bg-inverse-surface border-t border-border-subtle dark:border-outline-variant flat no shadows docked full-width bottom w-full mt-auto">
+<div class="max-w-[1200px] mx-auto px-4 lg:px-6 py-12 flex flex-col gap-8 w-full">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 border-b border-border-subtle">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">domain</span>
+</div>
+<div>
+<span class="text-headline-sm font-headline-sm text-primary dark:text-inverse-primary">VenueConnect Polinela</span>
+<p class="text-caption font-caption text-status-muted">Sistem Administrasi Reservasi &amp; Sarana Prasarana Kampus</p>
+</div>
+</div>
+<!-- Institutional Links -->
+<nav aria-label="Tautan Kebijakan" class="flex flex-wrap items-center gap-x-6 gap-y-2">
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary font-body-sm text-body-sm hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none" href="#">Panduan Penggunaan</a>
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary font-body-sm text-body-sm hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none" href="#">Kebijakan Privasi</a>
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary font-body-sm text-body-sm hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none" href="#">Ketentuan Layanan</a>
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary font-body-sm text-body-sm hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none" href="#">Kontak Pengelola UPT</a>
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary font-body-sm text-body-sm hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none" href="#">Peta Kampus</a>
+</nav>
+</div>
+<!-- Copyright Notice -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-caption font-caption text-status-muted">
+<p>© 2024 Politeknik Negeri Lampung (Polinela). Hak Cipta Dilindungi Undang-Undang. Pengelolaan Fasilitas &amp; Gedung Kampus Terpadu.</p>
+<div class="flex items-center gap-4">
+<span>Jl. Soekarno Hatta No.10, Rajabasa, Bandar Lampung</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Interactive JavaScript for Tab Switching & Micro-interactions -->
+<script>
+    function switchAuthTab(type) {
+      const ssoBtn = document.getElementById('tab-sso-btn');
+      const publicBtn = document.getElementById('tab-public-btn');
+      const ssoPanel = document.getElementById('panel-sso');
+      const publicPanel = document.getElementById('panel-public');
+
+      if (type === 'sso') {
+        // Activate SSO Tab
+        ssoBtn.className = "flex-1 py-2.5 px-3 rounded-md text-label-md font-label-md text-primary bg-surface-white shadow-sm border border-border-subtle transition-all duration-150 flex items-center justify-center gap-2";
+        publicBtn.className = "flex-1 py-2.5 px-3 rounded-md text-label-md font-label-md text-status-muted hover:text-text-main transition-all duration-150 flex items-center justify-center gap-2";
+        ssoPanel.classList.remove('hidden');
+        publicPanel.classList.add('hidden');
+      } else {
+        // Activate Public Tab
+        publicBtn.className = "flex-1 py-2.5 px-3 rounded-md text-label-md font-label-md text-primary bg-surface-white shadow-sm border border-border-subtle transition-all duration-150 flex items-center justify-center gap-2";
+        ssoBtn.className = "flex-1 py-2.5 px-3 rounded-md text-label-md font-label-md text-status-muted hover:text-text-main transition-all duration-150 flex items-center justify-center gap-2";
+        publicPanel.classList.remove('hidden');
+        ssoPanel.classList.add('hidden');
+      }
+    }
+
+    function togglePasswordVisibility() {
+      const pwInput = document.getElementById('public-password');
+      const icon = document.getElementById('pw-visibility-icon');
+      if (pwInput.type === 'password') {
+        pwInput.type = 'text';
+        icon.textContent = 'visibility_off';
+      } else {
+        pwInput.type = 'password';
+        icon.textContent = 'visibility';
+      }
+    }
+  </script>
+  <script src="../prototype-nav.js" defer></script>
+</body></html>

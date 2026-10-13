@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard Operator &amp; Antrean Review - VenueConnect Polinela</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "status-warning": "#8F4B0E",
+            "surface-container-lowest": "#ffffff",
+            "surface-bright": "#f6f9ff",
+            "inverse-on-surface": "#e6f2ff",
+            "primary-container": "#245c4d",
+            "on-primary": "#ffffff",
+            "border-subtle": "#D8E0E5",
+            "page-canvas": "#F6F8F7",
+            "accent-warm-surface": "#FFF4D6",
+            "on-primary-fixed": "#002018",
+            "outline": "#707975",
+            "on-secondary": "#ffffff",
+            "on-error": "#ffffff",
+            "surface-container-low": "#ebf5ff",
+            "surface-container-high": "#ddeaf7",
+            "on-tertiary-fixed-variant": "#005140",
+            "status-muted": "#4B5563",
+            "on-tertiary-container": "#8ed5bd",
+            "surface-tint": "#316858",
+            "on-surface-variant": "#404945",
+            "secondary-fixed": "#c4ebde",
+            "on-secondary-fixed": "#002019",
+            "secondary": "#42655b",
+            "surface-container": "#e3effc",
+            "error": "#ba1a1a",
+            "status-warning-surface": "#FEF08A",
+            "status-muted-surface": "#F3F4F6",
+            "on-error-container": "#93000a",
+            "tertiary-container": "#0f5e4b",
+            "surface-container-highest": "#d8e4f1",
+            "status-success-surface": "#DEF7EC",
+            "inverse-primary": "#99d2bf",
+            "surface-white": "#FFFFFF",
+            "status-success": "#0E6245",
+            "on-secondary-fixed-variant": "#2a4d44",
+            "secondary-fixed-dim": "#a8cfc2",
+            "error-container": "#ffdad6",
+            "status-info": "#1E429F",
+            "background": "#f6f9ff",
+            "on-background": "#111d26",
+            "status-danger": "#9B1C1C",
+            "text-main": "#1F2933",
+            "on-primary-container": "#99d2bf",
+            "tertiary-fixed-dim": "#8ed4bc",
+            "primary": "#034436",
+            "brand-surface-tint": "#E8F2EE",
+            "tertiary": "#004536",
+            "on-primary-fixed-variant": "#155041",
+            "secondary-container": "#c1e8db",
+            "status-info-surface": "#EBF5FF",
+            "on-secondary-container": "#466a5f",
+            "surface-variant": "#d8e4f1",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed": "#a9f1d8",
+            "accent-warm": "#B7791F",
+            "outline-variant": "#bfc9c4",
+            "surface-dim": "#cfdbe8",
+            "status-danger-surface": "#FDE8E8",
+            "inverse-surface": "#26323b",
+            "on-tertiary-fixed": "#002018",
+            "primary-fixed-dim": "#99d2bf",
+            "primary-fixed": "#b5eedb",
+            "on-surface": "#111d26",
+            "surface": "#f6f9ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "label-md": ["Inter"],
+            "headline-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "headline-lg-mobile": ["Inter"],
+            "caption": ["Inter"],
+            "body-lg-medium": ["Inter"],
+            "label-sm": ["Inter"],
+            "headline-sm": ["Inter"],
+            "body-sm-medium": ["Inter"],
+            "headline-xl": ["Inter"],
+            "body-lg": ["Inter"],
+            "headline-md": ["Inter"],
+            "headline-xl-mobile": ["Inter"]
+          },
+          "fontSize": {
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "body-lg-medium": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-sm-medium": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-page-canvas text-text-main font-body-sm antialiased min-h-screen flex flex-col selection:bg-brand-surface-tint selection:text-primary">
+<!-- Operational Mode Notification Ribbon -->
+<aside aria-label="Identitas Mode Internal" class="w-full bg-primary-container text-on-primary text-xs py-1.5 px-4 font-label-sm border-b border-surface-tint">
+<div class="max-w-[1200px] mx-auto flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-status-success-surface animate-pulse"></span>
+<span>Unit Pengelola Teknis (UPT) Sarana &amp; Prasarana - Mode Operator Verifikator</span>
+<span class="text-on-primary-container font-caption text-xs">| Sistem Pengawasan Terpadu</span>
+</div>
+<div class="flex items-center gap-4 text-xs font-body-sm-medium">
+<span class="flex items-center gap-1 opacity-90">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Waktu Server: <span id="clock-wib">14:22:09 WIB</span> (Sinkron)</span>
+</span>
+<span class="flex items-center gap-1 text-on-primary-container">
+<span class="material-symbols-outlined text-[14px]">security</span>
+<span>Tingkat Akses: Level 2 (Pemeriksa Teknis)</span>
+</span>
+</div>
+</div>
+</aside>
+<!-- Shared TopNavBar Component -->
+<header class="bg-surface-white dark:bg-inverse-surface border-b border-border-subtle dark:border-outline-variant shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<div class="max-w-[1200px] mx-auto px-4 lg:px-6 h-16 flex items-center justify-between w-full">
+<div class="flex items-center gap-6">
+<a class="text-headline-sm font-headline-sm text-primary dark:text-inverse-primary tracking-tight flex items-center gap-2 hover:opacity-95" href="#">
+<span class="material-symbols-outlined text-primary text-[26px]">account_balance</span>
+<span>VenueConnect Polinela</span>
+</a>
+<nav class="hidden md:flex items-center gap-6 pl-4 border-l border-border-subtle">
+<a class="text-text-main dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-body-sm-medium text-body-sm-medium hover:bg-brand-surface-tint dark:hover:bg-surface-variant transition-colors duration-150 py-1 px-2 rounded" href="#">Gedung</a>
+<a class="text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary font-body-lg-medium text-body-lg-medium pb-1 py-1 px-2" href="#">Jadwal</a>
+<a class="text-text-main dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-body-sm-medium text-body-sm-medium hover:bg-brand-surface-tint dark:hover:bg-surface-variant transition-colors duration-150 py-1 px-2 rounded" href="#">Prosedur</a>
+<a class="text-text-main dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-body-sm-medium text-body-sm-medium hover:bg-brand-surface-tint dark:hover:bg-surface-variant transition-colors duration-150 py-1 px-2 rounded" href="#">Bantuan/AI</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<!-- Actions & Operator Profile -->
+<div class="flex items-center gap-2 text-status-muted">
+<button aria-label="Notifikasi Tugas Antrean" class="w-10 h-10 rounded flex items-center justify-center hover:bg-brand-surface-tint text-primary transition-colors relative" type="button">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-status-danger rounded-full"></span>
+</button>
+<button aria-label="Bantuan Prosedural" class="w-10 h-10 rounded flex items-center justify-center hover:bg-brand-surface-tint text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">help</span>
+</button>
+</div>
+<div class="h-8 w-px bg-border-subtle hidden sm:block"></div>
+<div class="flex items-center gap-3 pl-1">
+<div class="w-9 h-9 rounded-full bg-brand-surface-tint border border-border-subtle flex items-center justify-center text-primary font-label-md">
+<span>RA</span>
+</div>
+<div class="hidden sm:flex flex-col text-left">
+<span class="font-label-sm text-label-sm text-text-main leading-tight">Petugas (simulasi)</span>
+<span class="text-caption font-caption text-status-muted leading-tight">Identitas petugas disamarkan pada preview</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Canvas Container -->
+<main class="flex-grow max-w-[1200px] mx-auto w-full px-4 lg:px-6 py-6 flex flex-col gap-6">
+<!-- Screen Intent Headline & Quick Metric Indicators -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-border-subtle pb-4">
+<div>
+<div class="flex items-center gap-2 text-caption font-caption text-status-muted uppercase tracking-wider mb-1">
+<span>Portal Administrasi Aset</span>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span>Verifikasi &amp; Tinjauan Kelayakan</span>
+</div>
+<h1 class="text-headline-md font-headline-md text-primary tracking-tight">Antrean Pengajuan &amp; Validasi Reservasi</h1>
+<p class="text-body-sm font-body-sm text-status-muted">Periksa berkas legalitas kegiatan, kelengkapan berkas, dan ketersediaan slot logistik sarana kampus.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-status-info-surface text-status-info text-label-sm font-label-sm border border-border-subtle">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Antrean Terbuka: 6 Berkas</span>
+</span>
+<button class="h-[44px] px-4 rounded-lg bg-surface-white border border-border-subtle hover:bg-brand-surface-tint text-primary font-label-md text-label-md inline-flex items-center gap-2 transition-colors duration-150" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Riwayat Verifikasi</span>
+</button>
+</div>
+</section>
+<!-- Operational KPI Summary Bento Row -->
+<section aria-label="Ringkasan Antrean Verifikasi" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Card 1 -->
+<div class="bg-surface-white border border-border-subtle rounded-xl p-4 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-status-warning">
+<span class="text-caption font-caption text-status-muted uppercase font-label-sm">Menunggu Verifikasi</span>
+<span class="material-symbols-outlined text-[20px] bg-status-warning-surface p-1 rounded-md">pending_actions</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="text-headline-lg font-headline-lg text-text-main">4</span>
+<span class="text-caption font-caption text-status-warning">Dossier aktif</span>
+</div>
+<div class="mt-2 text-caption font-caption text-status-muted border-t border-border-subtle pt-2">
+          Prioritas: 1 kegiatan besok
+        </div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-white border border-border-subtle rounded-xl p-4 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-accent-warm">
+<span class="text-caption font-caption text-status-muted uppercase font-label-sm">Perlu Perbaikan</span>
+<span class="material-symbols-outlined text-[20px] bg-accent-warm-surface p-1 rounded-md">edit_note</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="text-headline-lg font-headline-lg text-text-main">2</span>
+<span class="text-caption font-caption text-status-muted">Menunggu revisi</span>
+</div>
+<div class="mt-2 text-caption font-caption text-status-muted border-t border-border-subtle pt-2">
+          Masa tenggang 24 jam
+        </div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-white border border-border-subtle rounded-xl p-4 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-status-success">
+<span class="text-caption font-caption text-status-muted uppercase font-label-sm">Disetujui Hari Ini</span>
+<span class="material-symbols-outlined text-[20px] bg-status-success-surface p-1 rounded-md">task_alt</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="text-headline-lg font-headline-lg text-text-main">3</span>
+<span class="text-caption font-caption text-status-success font-body-sm-medium">Selesai diperiksa</span>
+</div>
+<div class="mt-2 text-caption font-caption text-status-muted border-t border-border-subtle pt-2">
+          Diteruskan ke PPK/WR II
+        </div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-white border border-border-subtle rounded-xl p-4 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-status-muted">
+<span class="text-caption font-caption text-status-muted uppercase font-label-sm">Konflik Kalender</span>
+<span class="material-symbols-outlined text-[20px] bg-status-muted-surface p-1 rounded-md">event_busy</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="text-headline-lg font-headline-lg text-text-main">0</span>
+<span class="text-caption font-caption text-status-success">Kondisi aman</span>
+</div>
+<div class="mt-2 text-caption font-caption text-status-muted border-t border-border-subtle pt-2">
+          Sinkronisasi jadwal 100%
+        </div>
+</div>
+</section>
+<!-- Operational Dual-Column Canvas (8 cols vs 4 cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- LEFT COLUMN: Worklist Queue Table (8 Columns) -->
+<section class="lg:col-span-7 xl:col-span-7 flex flex-col gap-4">
+<!-- Filter Toolbar -->
+<div class="bg-surface-white border border-border-subtle rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between">
+<!-- Search Registrasi -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-status-muted text-[18px]">search</span>
+<input class="w-full pl-9 pr-3 h-[44px] bg-surface-white border border-border-subtle rounded-lg text-body-sm font-body-sm text-text-main placeholder-status-muted focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all outline-none" placeholder="Cari No. Registrasi, Unit, Acara..." type="text" value=""/>
+</div>
+<!-- Filter Gedung -->
+<div class="flex items-center gap-2">
+<label class="sr-only" for="filter-gedung">Filter Gedung</label>
+<select class="h-[44px] px-3 bg-surface-white border border-border-subtle rounded-lg text-body-sm-medium font-body-sm-medium text-text-main focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all outline-none" id="filter-gedung">
+<option value="all">Semua Gedung Kampus</option>
+<option selected="" value="gsg">Gedung Serbaguna (GSG)</option>
+<option value="pasca">Aula Pascasarjana Lt. 3</option>
+<option value="gka">Gedung Kuliah Bersama (GKA)</option>
+<option value="plb">Pelataran Terbuka Polinela</option>
+</select>
+<!-- Filter Tipe -->
+<label class="sr-only" for="filter-tipe">Filter Tipe</label>
+<select class="h-[44px] px-3 bg-surface-white border border-border-subtle rounded-lg text-body-sm-medium font-body-sm-medium text-text-main focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all outline-none" id="filter-tipe">
+<option value="all">Semua Kategori</option>
+<option selected="" value="internal">Akademik / Internal</option>
+<option value="mitra">Mitra Publik / Eksternal</option>
+</select>
+</div>
+</div>
+<!-- Quick Filter Status Chips -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs">
+<span class="text-caption font-caption text-status-muted whitespace-nowrap">Filter Status:</span>
+<button class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm whitespace-nowrap" type="button">Semua (6)</button>
+<button class="px-2.5 py-1 rounded-full bg-status-info-surface text-status-info hover:bg-brand-surface-tint font-label-sm whitespace-nowrap" type="button">Sedang diperiksa (2)</button>
+<button class="px-2.5 py-1 rounded-full bg-status-warning-surface text-status-warning hover:bg-brand-surface-tint font-label-sm whitespace-nowrap" type="button">Menunggu persetujuan (2)</button>
+<button class="px-2.5 py-1 rounded-full bg-accent-warm-surface text-accent-warm hover:bg-brand-surface-tint font-label-sm whitespace-nowrap" type="button">Perlu perbaikan (2)</button>
+</div>
+</div>
+<!-- Task List Container -->
+<div class="bg-surface-white border border-border-subtle rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="px-5 py-3 border-b border-border-subtle flex items-center justify-between bg-page-canvas/60">
+<span class="font-label-sm text-label-sm text-status-muted uppercase tracking-wider">Daftar Antrean Berkas Masuk</span>
+<span class="text-caption font-caption text-status-muted">Menampilkan 3 antrean prioritas</span>
+</div>
+<div class="divide-y divide-border-subtle">
+<!-- Row 1 (ACTIVE SELECTED ITEM): REQ-2024-1108 -->
+<article class="p-4 bg-brand-surface-tint/60 border-l-4 border-primary relative cursor-pointer transition-all duration-150">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-md text-label-md text-primary font-bold">REQ-2024-1108</span>
+<!-- Indonesian Badge: Sedang diperiksa -->
+<span class="inline-flex items-center gap-1 h-[26px] px-2.5 rounded-full text-xs font-label-sm bg-status-info-surface text-status-info border border-status-info/20">
+<span class="material-symbols-outlined text-[14px]">sync</span>
+<span>Sedang diperiksa</span>
+</span>
+<span class="text-caption font-caption text-status-muted">Kegiatan Mahasiswa</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-main mt-0.5">Seminar Nasional Robotika &amp; Pameran IoT 2024</h3>
+<div class="flex items-center gap-4 text-xs font-body-sm text-status-muted mt-1 flex-wrap">
+<span class="flex items-center gap-1 text-text-main font-body-sm-medium">
+<span class="material-symbols-outlined text-[16px] text-primary">domain</span>
+<span>Gedung Serbaguna (GSG)</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-status-muted">groups</span>
+<span>UKM Riset &amp; Teknologi Polinela</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-status-muted">event</span>
+<span>18 Nov 2024 (08:30 - 16:00 WIB)</span>
+</span>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between gap-2 pt-2 sm:pt-0">
+<span class="text-caption font-caption text-status-success font-body-sm-medium bg-status-success-surface px-2 py-0.5 rounded">Fasilitas Lengkap</span>
+<span class="text-xs font-label-sm text-primary flex items-center gap-0.5">
+<span>Sedang Ditinjau</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</div>
+</article>
+<!-- Row 2: REQ-2024-1109 -->
+<article class="p-4 hover:bg-page-canvas/70 cursor-pointer transition-colors duration-150 border-l-4 border-transparent">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-md text-label-md text-text-main">REQ-2024-1109</span>
+<!-- Indonesian Badge: Menunggu persetujuan -->
+<span class="inline-flex items-center gap-1 h-[26px] px-2.5 rounded-full text-xs font-label-sm bg-status-warning-surface text-status-warning border border-status-warning/20">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span>
+<span>Menunggu persetujuan</span>
+</span>
+<span class="text-caption font-caption text-status-muted">Kuliah Umum</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-main mt-0.5">Seminar Akuntansi Publik: Transformasi Digital Pajak</h3>
+<div class="flex items-center gap-4 text-xs font-body-sm text-status-muted mt-1 flex-wrap">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+<span>Aula Pascasarjana Lt. 3</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">school</span>
+<span>Jurusan Ekonomi &amp; Bisnis</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">event</span>
+<span>20 Nov 2024 (09:00 - 12:30 WIB)</span>
+</span>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between gap-2 pt-2 sm:pt-0">
+<span class="text-caption font-caption text-status-muted bg-status-muted-surface px-2 py-0.5 rounded">Standar Kampus</span>
+<button class="text-xs font-label-sm text-secondary hover:underline" type="button">Buka Berkas</button>
+</div>
+</div>
+</article>
+<!-- Row 3: REQ-2024-1102 -->
+<article class="p-4 hover:bg-page-canvas/70 cursor-pointer transition-colors duration-150 border-l-4 border-transparent">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-md text-label-md text-text-main">REQ-2024-1102</span>
+<!-- Indonesian Badge: Perlu perbaikan -->
+<span class="inline-flex items-center gap-1 h-[26px] px-2.5 rounded-full text-xs font-label-sm bg-accent-warm-surface text-accent-warm border border-accent-warm/20">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>Perlu perbaikan</span>
+</span>
+<span class="text-caption font-caption text-status-muted">Acara Akbar</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-main mt-0.5">Gladi Resik &amp; Konser Dies Natalis Polinela ke-40</h3>
+<div class="flex items-center gap-4 text-xs font-body-sm text-status-muted mt-1 flex-wrap">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+<span>Gedung Serbaguna (GSG)</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+<span>Panitia Dies Natalis 2024</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">event</span>
+<span>22 Nov 2024 (13:00 - 22:00 WIB)</span>
+</span>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between gap-2 pt-2 sm:pt-0">
+<span class="text-caption font-caption text-status-danger bg-status-danger-surface px-2 py-0.5 rounded">Kurang Lampiran K3</span>
+<button class="text-xs font-label-sm text-secondary hover:underline" type="button">Buka Berkas</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination Bar -->
+<footer class="p-3 bg-surface-white border-t border-border-subtle flex items-center justify-between text-xs text-status-muted">
+<span>Menampilkan 1-3 dari 6 pengajuan aktif</span>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded border border-border-subtle bg-status-muted-surface text-status-muted opacity-50 cursor-not-allowed" disabled="" type="button">Sebelumnya</button>
+<button class="px-2 py-1 rounded border border-border-subtle bg-primary text-on-primary font-label-sm" type="button">1</button>
+<button class="px-2 py-1 rounded border border-border-subtle hover:bg-page-canvas" type="button">2</button>
+<button class="px-2 py-1 rounded border border-border-subtle hover:bg-page-canvas" type="button">Selanjutnya</button>
+</div>
+</footer>
+</div>
+<!-- Operational Guideline Note Box -->
+<aside aria-label="Pedoman Verifikator" class="bg-status-info-surface/40 border border-status-info/20 rounded-xl p-4 flex gap-3 items-start">
+<span class="material-symbols-outlined text-status-info text-[22px] mt-0.5">info</span>
+<div class="text-xs leading-relaxed text-text-main">
+<span class="font-body-sm-medium text-status-info block mb-0.5">Contoh pedoman verifikasi (belum disahkan)</span>
+            Persyaratan dokumen, pengecekan teknis, dan pihak yang menyetujui harus mengikuti kebijakan resmi yang ditetapkan institusi.
+          </div>
+</aside>
+</section>
+<!-- RIGHT COLUMN: Dossier Review & Decision Action Panel (5 Columns on Desktop) -->
+<section class="lg:col-span-5 xl:col-span-5 flex flex-col gap-4">
+<!-- Dossier Detail Card -->
+<div class="bg-surface-white border border-border-subtle rounded-xl shadow-sm overflow-hidden">
+<!-- Panel Header -->
+<div class="p-4 bg-page-canvas border-b border-border-subtle flex items-center justify-between">
+<div>
+<span class="text-caption font-caption text-status-muted block">Berkas Terpilih</span>
+<h2 class="text-headline-sm font-headline-sm text-primary">Tinjauan Berkas Pengajuan: REQ-2024-1108</h2>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-label-sm bg-status-info-surface text-status-info border border-status-info/20">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>Dokumen Lengkap</span>
+</span>
+</div>
+<!-- Schedule & Conflict Status Banner -->
+<div class="p-4 bg-status-success-surface/40 border-b border-status-success/20 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-status-success-surface text-status-success flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">event_available</span>
+</div>
+<div class="flex-1">
+<div class="font-body-sm-medium text-status-success flex items-center gap-1.5">
+<span>Slot Kalender GSG Bebas Bentrok</span>
+<span class="text-caption font-caption bg-status-success text-on-primary px-1.5 py-0.2 rounded-full text-[11px]">Tersedia Hijau</span>
+</div>
+<p class="text-xs text-status-muted mt-0.5">Senin, 18 November 2024 | 08:30 - 16:00 WIB (GSG Utama Polinela)</p>
+</div>
+</div>
+<!-- Detailed Dossier Content -->
+<div class="p-5 flex flex-col gap-5 text-body-sm">
+<!-- Section 1: Profil Pemohon -->
+<div>
+<div class="flex items-center justify-between pb-2 mb-2 border-b border-border-subtle">
+<span class="font-label-sm text-label-sm text-status-muted uppercase tracking-wider">Identitas Pemohon Resmi</span>
+<span class="text-caption font-caption text-primary">Unit Terakreditasi Polinela</span>
+</div>
+<div class="grid grid-cols-2 gap-3 text-xs">
+<div>
+<span class="text-status-muted block">Pemohon / Organisasi:</span>
+<span class="font-body-sm-medium text-text-main">UKM Riset &amp; Teknologi Polinela</span>
+</div>
+<div>
+<span class="text-status-muted block">Kategori Pemakaian:</span>
+<span class="font-body-sm-medium text-text-main">Akademik / Internal Mahasiswa</span>
+</div>
+<div>
+<span class="text-status-muted block">Dosen Pembina / Penanggung Jawab:</span>
+<span class="font-body-sm-medium text-text-main">Penanggung jawab (disamarkan)</span>
+<span class="text-caption text-status-muted">Identitas penanggung jawab disamarkan pada preview</span>
+</div>
+<div>
+<span class="text-status-muted block">Ketua Panitia / Kontak:</span>
+<span class="font-body-sm-medium text-text-main">Pemohon (disamarkan)</span>
+<span class="text-caption text-status-muted">Kontak pemohon tidak ditampilkan pada preview</span>
+</div>
+</div>
+</div>
+<!-- Section 2: Spesifikasi Fasilitas & Logistik -->
+<div>
+<div class="flex items-center justify-between pb-2 mb-2 border-b border-border-subtle">
+<span class="font-label-sm text-label-sm text-status-muted uppercase tracking-wider">Rincian Teknis &amp; Fasilitas yang Diajukan</span>
+<span class="text-caption font-caption text-status-success font-body-sm-medium">Inventaris Siap</span>
+</div>
+<div class="bg-page-canvas rounded-lg p-3 border border-border-subtle space-y-2">
+<div class="flex items-center justify-between text-xs pb-1.5 border-b border-border-subtle/80">
+<span class="flex items-center gap-1.5 text-text-main">
+<span class="material-symbols-outlined text-[16px] text-secondary">speaker</span>
+<span>Sound System 5000W Auditorium</span>
+</span>
+<span class="font-label-sm text-status-success">Tersedia (Set Standar)</span>
+</div>
+<div class="flex items-center justify-between text-xs pb-1.5 border-b border-border-subtle/80">
+<span class="flex items-center gap-1.5 text-text-main">
+<span class="material-symbols-outlined text-[16px] text-secondary">videocam</span>
+<span>Proyektor Laser 7000 Lumens + Layar Motorized</span>
+</span>
+<span class="font-label-sm text-status-success">Tersedia (GSG-01)</span>
+</div>
+<div class="flex items-center justify-between text-xs pb-1.5 border-b border-border-subtle/80">
+<span class="flex items-center gap-1.5 text-text-main">
+<span class="material-symbols-outlined text-[16px] text-secondary">chair</span>
+<span>Kursi Lipat Banquet: 450 unit</span>
+</span>
+<span class="font-label-sm text-status-success">Stok Cukup (Gudang B)</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<span class="flex items-center gap-1.5 text-text-main">
+<span class="material-symbols-outlined text-[16px] text-secondary">ac_unit</span>
+<span>Pendingin Ruangan (Central HVAC GSG)</span>
+</span>
+<span class="font-label-sm text-status-info">Jadwal Operasional 08:00</span>
+</div>
+</div>
+</div>
+<!-- Section 3: Lampiran Berkas Verifikasi -->
+<div>
+<div class="flex items-center justify-between pb-2 mb-2 border-b border-border-subtle">
+<span class="font-label-sm text-label-sm text-status-muted uppercase tracking-wider">Kelengkapan Berkas Persyaratan</span>
+<span class="text-caption font-caption text-status-muted">Format PDF Terunggah</span>
+</div>
+<div class="space-y-1.5 text-xs">
+<div class="flex items-center justify-between p-2 rounded bg-surface-white border border-border-subtle">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-danger text-[18px]">picture_as_pdf</span>
+<span class="font-body-sm-medium text-text-main truncate max-w-[200px]">Dokumen_Pendukung_Contoh.pdf</span>
+</div>
+<button class="text-primary hover:underline text-xs flex items-center gap-0.5" type="button">
+<span>Pratinjau</span>
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-white border border-border-subtle">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-danger text-[18px]">picture_as_pdf</span>
+<span class="font-body-sm-medium text-text-main truncate max-w-[200px]">Proposal_Rundown_Robotika24.pdf</span>
+</div>
+<button class="text-primary hover:underline text-xs flex items-center gap-0.5" type="button">
+<span>Pratinjau</span>
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 4: Riwayat Keputusan & Log Operator -->
+<div class="bg-page-canvas rounded-lg p-3 border border-border-subtle">
+<span class="font-label-sm text-xs text-status-muted block mb-2">Riwayat Proses Pengajuan</span>
+<ul class="text-xs space-y-2 border-l-2 border-border-subtle ml-2 pl-3">
+<li class="relative">
+<span class="w-2 h-2 rounded-full bg-status-success absolute -left-[17px] top-1"></span>
+<span class="font-body-sm-medium text-text-main">Pengajuan Berkas Online Diterima</span>
+<div class="text-caption text-status-muted">14 Nov 2024, 10:15 WIB oleh UKM Riset</div>
+</li>
+<li class="relative">
+<span class="w-2 h-2 rounded-full bg-primary absolute -left-[17px] top-1"></span>
+<span class="font-body-sm-medium text-text-main">Pemeriksaan Kelayakan Teknis</span>
+<div class="text-caption text-status-muted">Waktu dan petugas hanya data simulasi</div>
+</li>
+</ul>
+</div>
+<!-- Decision Form Section -->
+<form class="border-t border-border-subtle pt-4 flex flex-col gap-4" onsubmit="event.preventDefault();">
+<div>
+<label class="block font-label-sm text-label-sm text-text-main mb-1.5" for="catatan-keputusan">
+                  Catatan / Alasan Keputusan Verifikator
+                </label>
+<textarea class="w-full p-3 bg-surface-white border border-border-subtle rounded-lg text-body-sm font-body-sm text-text-main placeholder-status-muted focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all outline-none resize-none" id="catatan-keputusan" placeholder="Tuliskan catatan sesuai pedoman resmi yang telah disahkan..." rows="3">Contoh catatan simulasi. Keputusan dan tindak lanjut harus mengikuti prosedur resmi institusi.</textarea>
+<p class="text-caption font-caption text-status-muted mt-1">Catatan ini akan otomatis tercantum pada notifikasi surel dan dasbor pemohon.</p>
+</div>
+<!-- Explicit Action Buttons Hierarchy -->
+<div class="flex flex-col gap-2.5 pt-1">
+<!-- Primary Action: Teruskan & Setujui -->
+<button class="w-full h-[44px] px-5 bg-primary-container hover:bg-[#173B32] text-on-primary font-label-md text-label-md rounded-lg flex items-center justify-center gap-2 shadow-sm transition-all duration-150 active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Teruskan &amp; Setujui Tahap Ini</span>
+</button>
+<!-- Secondary Split Actions: Minta Perbaikan vs Tolak Pengajuan -->
+<div class="grid grid-cols-2 gap-2">
+<!-- Minta Perbaikan (Kuning / Warning) -->
+<button class="h-[44px] px-3 bg-status-warning-surface hover:bg-yellow-200 text-status-warning border border-status-warning/40 font-label-sm text-label-sm rounded-lg flex items-center justify-center gap-1.5 transition-colors duration-150" type="button">
+<span class="material-symbols-outlined text-[16px]">rule</span>
+<span>Minta Perbaikan</span>
+</button>
+<!-- Tolak Pengajuan (Merah Outline / Danger) -->
+<button class="h-[44px] px-3 bg-surface-white hover:bg-status-danger-surface text-status-danger border border-status-danger/40 font-label-sm text-label-sm rounded-lg flex items-center justify-center gap-1.5 transition-colors duration-150" type="button">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span>Tolak Pengajuan</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Shared Institutional Footer Component -->
+<footer class="bg-page-canvas dark:bg-inverse-surface border-t border-border-subtle dark:border-outline-variant docked full-width bottom w-full mt-auto">
+<div class="max-w-[1200px] mx-auto px-4 lg:px-6 py-12 flex flex-col gap-8 w-full">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-b border-border-subtle pb-6">
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm text-primary dark:text-inverse-primary">VenueConnect Polinela</span>
+<span class="text-body-sm font-body-sm text-status-muted dark:text-surface-variant mt-1">Sistem Informasi Pengelolaan Gedung &amp; Sarana Kampus Politeknik Negeri Lampung</span>
+</div>
+<nav class="flex flex-wrap items-center gap-4 text-body-sm font-body-sm">
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-150" href="#">Panduan Penggunaan</a>
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-150" href="#">Kebijakan Privasi</a>
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-150" href="#">Ketentuan Layanan</a>
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-150" href="#">Kontak Pengelola UPT</a>
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-150" href="#">Peta Kampus</a>
+</nav>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-between gap-4 text-caption font-caption text-status-muted dark:text-surface-variant">
+<p>© 2024 Politeknik Negeri Lampung (Polinela). Hak Cipta Dilindungi Undang-Undang. Pengelolaan Fasilitas &amp; Gedung Kampus Terpadu.</p>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1 text-status-success">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+<span>Server UPT Normal</span>
+</span>
+<span>| Versi Sistem 2.4.1-OPR</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Light Runtime Micro-Interactions Script -->
+<script>
+    // Live Server Clock Indicator (WIB)
+    function updateClock() {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      const clockEl = document.getElementById('clock-wib');
+      if (clockEl) {
+        clockEl.textContent = `${hours}:${minutes}:${seconds} WIB`;
+      }
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+  <script src="../prototype-nav.js" defer></script>
+</body></html>

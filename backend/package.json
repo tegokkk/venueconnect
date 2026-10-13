@@ -1,0 +1,44 @@
+{
+  "name": "backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --port 3001",
+    "build": "next build",
+    "start": "next start --port 3001",
+    "lint": "eslint",
+    "test:unit": "node --test test/*.test.js",
+    "test:integration": "node test/integration.dev.mjs",
+    "test:expiry": "tsx --tsconfig jsconfig.json test/booking-expiry.dev.mjs",
+    "booking:expire": "tsx --tsconfig jsconfig.json ../scripts/expire-overdue-bookings.mjs",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "db:seed": "prisma db seed",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "^4.0.93",
+    "@prisma/adapter-pg": "7.10.0",
+    "@prisma/client": "7.10.0",
+    "ai": "^7.0.137",
+    "next": "16.4.0",
+    "pg": "^8.16.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.0",
+    "prisma": "7.10.0",
+    "tailwindcss": "^4",
+    "tsx": "^4.20.6"
+  },
+  "overrides": {
+    "mysql2": "3.24.5",
+    "deepmerge-ts": "8.0.2"
+  }
+}

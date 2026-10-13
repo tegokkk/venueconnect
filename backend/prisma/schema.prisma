@@ -1,0 +1,366 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum UserType {
+  INTERNAL
+  EXTERNAL
+}
+
+enum RoleType {
+  ADMIN
+  APPROVER
+  PAYMENT_VERIFIER
+  BUILDING_OFFICER
+  MEMBER
+}
+
+enum BookingType {
+  INTERNAL
+  RENTAL
+}
+
+enum ApplicantCategory {
+  MAHASISWA
+  DOSEN_PEGAWAI
+  UMUM
+}
+
+enum BookingStatus {
+  DRAFT
+  SUBMITTED
+  UNDER_REVIEW
+  REVISION_REQUESTED
+  AWAITING_APPROVAL
+  AWAITING_PAYMENT
+  CONFIRMED
+  REJECTED
+  CANCELLED
+  COMPLETED
+  EXPIRED
+}
+
+enum ApprovalStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  REVISION_REQUESTED
+}
+
+enum PaymentStatus {
+  UNPAID
+  PENDING_VERIFICATION
+  VERIFIED
+  FAILED
+  EXPIRED
+  REFUNDED
+}
+
+enum AudienceType {
+  INTERNAL
+  EXTERNAL
+  ALL
+}
+
+model User {
+  id        String   @id @default(uuid()) @db.Uuid
+  email     String   @unique
+  name      String
+  phone     String?
+  userType  UserType
+  accountCategory ApplicantCategory?
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now()) @db.Timestamptz
+  updatedAt DateTime @updatedAt @db.Timestamptz
+
+  roles                 UserRole[]
+  bookings              Booking[]              @relation("UserBookings")
+  approvedRates         BuildingRate[]         @relation("RateApprover")
+  auditEvents           AuditEvent[]           @relation("AuditActor")
+  notifications         Notification[]
+  usageHandovers        UsageHandover[]        @relation("HandoverOfficer")
+  buildingBlocks        BuildingBlock[]        @relation("BlockCreator")
+  approvalHistory       ApprovalHistory[]      @relation("ApprovalActor")
+  uploadedDocuments     BookingDocument[]      @relation("UserDocuments")
+  assignedApprovalSteps ApprovalStep[]         @relation("ApprovalAssignee")
+  verifiedPayments      Payment[]              @relation("PaymentVerifier")
+  bookingStatusChanges  BookingStatusHistory[] @relation("StatusHistoryActor")
+}
+
+model Role {
+  id                  String         @id @default(uuid()) @db.Uuid
+  name                RoleType       @unique
+  description         String?
+  users               UserRole[]
+  approvalAssignments ApprovalStep[] @relation("ApprovalRole")
+}
+
+model UserRole {
+  id     String @id @default(uuid()) @db.Uuid
+  userId String @db.Uuid
+  roleId String @db.Uuid
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role Role @relation(fields: [roleId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, roleId])
+}
+
+model Building {
+  id                  String   @id @default(uuid()) @db.Uuid
+  slug                String   @unique
+  name                String
+  description         String?
+  // Draf privat; syarat hanya tampil publik setelah ada referensi pengesahan dan waktu terbit.
+  termsAndConditions  String?
+  termsApprovalReference String?
+  termsPublishedAt    DateTime? @db.Timestamptz
+  location            String?
+  capacity            Int?
+  isActive            Boolean  @default(true)
+  internalLoanEnabled Boolean  @default(true)
+  publicRentalEnabled Boolean  @default(true)
+  createdAt           DateTime @default(now()) @db.Timestamptz
+  updatedAt           DateTime @updatedAt @db.Timestamptz
+
+  facilities BuildingFacility[]
+  rates      BuildingRate[]
+  bookings   Booking[]
+  blocks     BuildingBlock[]
+}
+
+model Facility {
+  id          String   @id @default(uuid()) @db.Uuid
+  name        String   @unique
+  description String?
+  createdAt   DateTime @default(now()) @db.Timestamptz
+  updatedAt   DateTime @updatedAt @db.Timestamptz
+
+  buildings BuildingFacility[]
+}
+
+model BuildingFacility {
+  id         String  @id @default(uuid()) @db.Uuid
+  buildingId String  @db.Uuid
+  facilityId String  @db.Uuid
+  detail     String?
+
+  building Building @relation(fields: [buildingId], references: [id], onDelete: Cascade)
+  facility Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+
+  @@unique([buildingId, facilityId])
+}
+
+model BuildingRate {
+  id           String       @id @default(uuid()) @db.Uuid
+  buildingId   String       @db.Uuid
+  name         String       @default("Tarif gedung")
+  audienceType AudienceType
+  amount       Decimal      @db.Decimal(12, 2)
+  currency     String       @default("IDR")
+  unit         String // e.g. "hour", "day", "event"
+  validFrom    DateTime     @db.Timestamptz
+  validUntil   DateTime?    @db.Timestamptz
+  isActive     Boolean      @default(true)
+    isBookable   Boolean      @default(true)
+    maxDurationMinutes Int?
+  approvedById String?      @db.Uuid
+  createdAt    DateTime     @default(now()) @db.Timestamptz
+  updatedAt    DateTime     @updatedAt @db.Timestamptz
+
+  building   Building @relation(fields: [buildingId], references: [id], onDelete: Cascade)
+  approvedBy User?    @relation("RateApprover", fields: [approvedById], references: [id], onDelete: SetNull)
+
+  @@index([buildingId, isActive, validFrom, validUntil])
+}
+
+model Booking {
+  // TODO: KEBIJAKAN INSTITUSI — tetapkan retensi, anonimisasi, dan penghapusan booking sebelum produksi.
+  id                 String        @id @default(uuid()) @db.Uuid
+  publicReference    String        @unique
+  requesterId        String        @db.Uuid
+  buildingId         String        @db.Uuid
+  bookingType        BookingType
+  applicantCategory  ApplicantCategory?
+  eventName          String
+  eventDescription   String?
+  startsAt           DateTime      @db.Timestamptz
+  endsAt             DateTime      @db.Timestamptz
+  attendeeCount      Int?
+  status             BookingStatus @default(DRAFT)
+  paymentDueAt       DateTime?     @db.Timestamptz
+  cancellationReason String?
+  rateSnapshot       Json? // Snapshot of building rate
+  timezoneId         String        @default("Asia/Jakarta")
+  cancelledAt        DateTime?     @db.Timestamptz
+  createdAt          DateTime      @default(now()) @db.Timestamptz
+  updatedAt          DateTime      @updatedAt @db.Timestamptz
+
+  requester     User                   @relation("UserBookings", fields: [requesterId], references: [id], onDelete: Restrict)
+  building      Building               @relation(fields: [buildingId], references: [id], onDelete: Restrict)
+  approvalSteps ApprovalStep[]
+  statusHistory BookingStatusHistory[]
+  payments      Payment[]
+  usageHandover UsageHandover?
+  documents     BookingDocument[]
+
+  @@index([buildingId, startsAt, endsAt, status])
+  @@index([requesterId, createdAt])
+  @@index([applicantCategory, status])
+}
+
+model ApprovalStep {
+  id         String         @id @default(uuid()) @db.Uuid
+  bookingId  String         @db.Uuid
+  stepNumber Int
+  assigneeId String?        @db.Uuid // specific user
+  roleId     String?        @db.Uuid // or role
+  status     ApprovalStatus @default(PENDING)
+  createdAt  DateTime       @default(now()) @db.Timestamptz
+  updatedAt  DateTime       @updatedAt @db.Timestamptz
+
+  booking  Booking           @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  assignee User?             @relation("ApprovalAssignee", fields: [assigneeId], references: [id], onDelete: SetNull)
+  role     Role?             @relation("ApprovalRole", fields: [roleId], references: [id], onDelete: SetNull)
+  history  ApprovalHistory[]
+
+  @@index([assigneeId, status])
+  @@index([roleId, status])
+}
+
+model ApprovalHistory {
+  id        String         @id @default(uuid()) @db.Uuid
+  stepId    String         @db.Uuid
+  actorId   String         @db.Uuid
+  outcome   ApprovalStatus
+  note      String?
+  decidedAt DateTime       @default(now()) @db.Timestamptz
+
+  step  ApprovalStep @relation(fields: [stepId], references: [id], onDelete: Cascade)
+  actor User         @relation("ApprovalActor", fields: [actorId], references: [id], onDelete: Restrict)
+}
+
+model Payment {
+  id           String        @id @default(uuid()) @db.Uuid
+  bookingId    String        @db.Uuid
+  amount       Decimal       @db.Decimal(12, 2)
+  currency     String        @default("IDR")
+  method       String?
+  reference    String?
+  reviewNote   String?
+  status       PaymentStatus @default(UNPAID)
+  verifiedById String?       @db.Uuid
+  verifiedAt   DateTime?     @db.Timestamptz
+  dueAt        DateTime?     @db.Timestamptz
+  // Bukti transfer development disimpan privat; retensi dan backup produksi menunggu kebijakan BLU/TI.
+  proofStorageKey String?
+  proofFileName String?
+  proofFileSize Int?
+  proofMimeType String?
+  proofUploadedAt DateTime? @db.Timestamptz
+  createdAt    DateTime      @default(now()) @db.Timestamptz
+  updatedAt    DateTime      @updatedAt @db.Timestamptz
+
+  booking    Booking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  verifiedBy User?   @relation("PaymentVerifier", fields: [verifiedById], references: [id], onDelete: SetNull)
+}
+
+model BuildingBlock {
+  id          String   @id @default(uuid()) @db.Uuid
+  buildingId  String   @db.Uuid
+  startsAt    DateTime @db.Timestamptz
+  endsAt      DateTime @db.Timestamptz
+  reason      String
+  createdById String   @db.Uuid
+  createdAt   DateTime @default(now()) @db.Timestamptz
+  updatedAt   DateTime @updatedAt @db.Timestamptz
+
+  building  Building @relation(fields: [buildingId], references: [id], onDelete: Cascade)
+  createdBy User     @relation("BlockCreator", fields: [createdById], references: [id], onDelete: Restrict)
+
+  @@index([buildingId, startsAt, endsAt])
+}
+
+model UsageHandover {
+  id              String    @id @default(uuid()) @db.Uuid
+  bookingId       String    @unique @db.Uuid
+  officerId       String    @db.Uuid
+  keyGivenAt      DateTime  @db.Timestamptz
+  keyReturnedAt   DateTime? @db.Timestamptz
+  conditionBefore String?
+  conditionAfter  String?
+  notes           String?
+  createdAt       DateTime  @default(now()) @db.Timestamptz
+  updatedAt       DateTime  @updatedAt @db.Timestamptz
+
+  booking Booking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  officer User    @relation("HandoverOfficer", fields: [officerId], references: [id], onDelete: Restrict)
+}
+
+model AuditEvent {
+  // TODO: KEBIJAKAN INSTITUSI — tetapkan masa simpan audit dan prosedur penghapusan/arsip.
+  id         String   @id @default(uuid()) @db.Uuid
+  actorId    String?  @db.Uuid
+  action     String
+  entityType String
+  entityId   String
+  metadata   Json?
+  requestId  String?
+  createdAt  DateTime @default(now()) @db.Timestamptz
+
+  actor User? @relation("AuditActor", fields: [actorId], references: [id], onDelete: SetNull)
+}
+
+model BookingStatusHistory {
+  id         String        @id @default(uuid()) @db.Uuid
+  bookingId  String        @db.Uuid
+  actorId    String?       @db.Uuid
+  fromStatus BookingStatus
+  toStatus   BookingStatus
+  note       String?
+  createdAt  DateTime      @default(now()) @db.Timestamptz
+
+  booking Booking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  actor   User?   @relation("StatusHistoryActor", fields: [actorId], references: [id], onDelete: SetNull)
+
+  @@index([bookingId, createdAt])
+}
+
+model Notification {
+  id           String    @id @default(uuid()) @db.Uuid
+  userId       String    @db.Uuid
+  type         String
+  title        String
+  body         String
+  resourceType String?
+  resourceId   String?
+  readAt       DateTime? @db.Timestamptz
+  createdAt    DateTime  @default(now()) @db.Timestamptz
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, readAt, createdAt])
+}
+
+model BookingDocument {
+  // TODO: KEBIJAKAN INSTITUSI — tetapkan retensi, penghapusan aman, akses, dan siklus backup dokumen.
+  id           String   @id @default(uuid()) @db.Uuid
+  bookingId    String   @db.Uuid
+  fileName     String
+  fileSize     Int
+  mimeType     String
+  storageKey   String // private storage path/key
+  uploadedById String   @db.Uuid
+  createdAt    DateTime @default(now()) @db.Timestamptz
+  updatedAt    DateTime @updatedAt @db.Timestamptz
+
+  booking    Booking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  uploadedBy User    @relation("UserDocuments", fields: [uploadedById], references: [id], onDelete: Restrict)
+
+  @@index([bookingId])
+}

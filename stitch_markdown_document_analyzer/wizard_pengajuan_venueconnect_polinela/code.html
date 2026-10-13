@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pratinjau Wizard Pengajuan VenueConnect — non-produksi</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-surface": "#111d26",
+            "primary-fixed": "#b5eedb",
+            "on-secondary-fixed-variant": "#2a4d44",
+            "secondary-container": "#c1e8db",
+            "status-danger": "#9B1C1C",
+            "surface-bright": "#f6f9ff",
+            "tertiary": "#004536",
+            "on-background": "#111d26",
+            "on-error-container": "#93000a",
+            "surface-variant": "#d8e4f1",
+            "status-info-surface": "#EBF5FF",
+            "tertiary-container": "#0f5e4b",
+            "inverse-primary": "#99d2bf",
+            "surface-container-low": "#ebf5ff",
+            "outline": "#707975",
+            "on-tertiary-container": "#8ed5bd",
+            "tertiary-fixed": "#a9f1d8",
+            "brand-surface-tint": "#E8F2EE",
+            "inverse-on-surface": "#e6f2ff",
+            "primary-container": "#245c4d",
+            "on-primary-fixed-variant": "#155041",
+            "status-danger-surface": "#FDE8E8",
+            "on-primary-container": "#99d2bf",
+            "accent-warm-surface": "#FFF4D6",
+            "text-main": "#1F2933",
+            "on-primary-fixed": "#002018",
+            "status-success": "#0E6245",
+            "on-primary": "#ffffff",
+            "status-muted": "#4B5563",
+            "surface-dim": "#cfdbe8",
+            "status-warning-surface": "#FEF08A",
+            "secondary": "#42655b",
+            "outline-variant": "#bfc9c4",
+            "primary": "#034436",
+            "on-secondary-fixed": "#002019",
+            "inverse-surface": "#26323b",
+            "surface-white": "#FFFFFF",
+            "surface-container-highest": "#d8e4f1",
+            "primary-fixed-dim": "#99d2bf",
+            "on-error": "#ffffff",
+            "accent-warm": "#B7791F",
+            "error-container": "#ffdad6",
+            "status-warning": "#8F4B0E",
+            "status-info": "#1E429F",
+            "on-secondary-container": "#466a5f",
+            "status-muted-surface": "#F3F4F6",
+            "tertiary-fixed-dim": "#8ed4bc",
+            "surface": "#f6f9ff",
+            "on-tertiary-fixed-variant": "#005140",
+            "error": "#ba1a1a",
+            "surface-container-high": "#ddeaf7",
+            "surface-tint": "#316858",
+            "on-tertiary-fixed": "#002018",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#c4ebde",
+            "on-secondary": "#ffffff",
+            "surface-container": "#e3effc",
+            "on-tertiary": "#ffffff",
+            "secondary-fixed-dim": "#a8cfc2",
+            "status-success-surface": "#DEF7EC",
+            "page-canvas": "#F6F8F7",
+            "border-subtle": "#D8E0E5",
+            "on-surface-variant": "#404945",
+            "background": "#f6f9ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-mobile": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "margin-mobile": "1rem",
+            "space-xl": "2rem",
+            "space-lg": "1.5rem",
+            "margin": "2rem",
+            "gutter": "1.5rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Inter"],
+            "body-sm-medium": ["Inter"],
+            "body-lg-medium": ["Inter"],
+            "headline-lg": ["Inter"],
+            "headline-xl": ["Inter"],
+            "label-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "headline-xl-mobile": ["Inter"],
+            "headline-sm": ["Inter"],
+            "headline-lg-mobile": ["Inter"],
+            "caption": ["Inter"],
+            "headline-md": ["Inter"],
+            "body-sm": ["Inter"]
+          },
+          "fontSize": {
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-sm-medium": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "body-lg-medium": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-page-canvas text-text-main min-h-screen flex flex-col font-body-sm antialiased selection:bg-brand-surface-tint selection:text-primary">
+<!-- TopNavBar (Shared Component from JSON) -->
+<header class="docked full-width top-0 sticky z-50 bg-surface-white dark:bg-inverse-surface border-b border-border-subtle dark:border-outline-variant shadow-sm dark:shadow-none">
+<div class="max-w-[1200px] mx-auto px-4 lg:px-6 h-16 flex items-center justify-between w-full">
+<!-- Brand Logo / Identity Anchor -->
+<div class="flex items-center gap-3">
+<a class="flex items-center gap-2 group" href="#">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-surface-white font-headline-sm text-headline-sm shadow-sm group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="apartment">apartment</span>
+</div>
+<div>
+<span class="text-headline-sm font-headline-sm text-primary dark:text-inverse-primary tracking-tight">VenueConnect Polinela</span>
+<span class="block text-caption font-caption text-status-muted">Sistem Pengelolaan Fasilitas Terpadu</span>
+</div>
+</a>
+</div>
+<!-- Navigation Links (Active mapping: 'Gedung' as current context) -->
+<nav aria-label="Navigasi Utama" class="hidden md:flex items-center gap-8 h-full">
+<a class="text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary font-body-lg-medium text-body-lg-medium pb-1 flex items-center gap-1.5 h-full" href="#">
+<span>Gedung</span>
+</a>
+<a class="text-text-main dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-body-sm-medium text-body-sm-medium hover:bg-brand-surface-tint dark:hover:bg-surface-variant transition-colors duration-150 px-2 py-1 rounded" href="#">
+<span>Jadwal</span>
+</a>
+<a class="text-text-main dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-body-sm-medium text-body-sm-medium hover:bg-brand-surface-tint dark:hover:bg-surface-variant transition-colors duration-150 px-2 py-1 rounded" href="#">
+<span>Prosedur</span>
+</a>
+<a class="text-text-main dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-body-sm-medium text-body-sm-medium hover:bg-brand-surface-tint dark:hover:bg-surface-variant transition-colors duration-150 px-2 py-1 rounded" href="#">
+<span>Bantuan/AI</span>
+</a>
+</nav>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-3">
+<button aria-label="Notifikasi Pengajuan" class="w-11 h-11 flex items-center justify-center rounded-lg border border-border-subtle bg-surface-white text-text-main hover:bg-brand-surface-tint transition-colors duration-150 active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-status-muted" data-icon="notifications">notifications</span>
+</button>
+<button aria-label="Bantuan dan Panduan" class="w-11 h-11 flex items-center justify-center rounded-lg border border-border-subtle bg-surface-white text-text-main hover:bg-brand-surface-tint transition-colors duration-150 active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-status-muted" data-icon="help">help</span>
+</button>
+<a class="inline-flex items-center justify-center min-h-[44px] px-5 py-2 rounded-lg bg-primary text-surface-white font-body-sm-medium text-body-sm-medium hover:bg-[#173B32] transition-colors duration-150 active:scale-[0.98]" href="#">
+          Masuk
+        </a>
+</div>
+</div>
+</header>
+<!-- Main Content Container -->
+<main class="flex-1 max-w-[1200px] w-full mx-auto px-4 lg:px-6 py-6 md:py-8 flex flex-col gap-6">
+<!-- Breadcrumb Context Nav -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-body-sm font-body-sm text-status-muted">
+<a class="hover:text-primary transition-colors flex items-center gap-1 min-h-[44px] py-2" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="home">home</span>
+<span>Beranda</span>
+</a>
+<span class="text-status-muted font-body-sm">/</span>
+<a class="hover:text-primary transition-colors min-h-[44px] py-2 flex items-center" href="#">GSG Polinela</a>
+<span class="text-status-muted font-body-sm">/</span>
+<span aria-current="page" class="text-primary font-body-sm-medium font-medium flex items-center">Formulir Pengajuan</span>
+</nav>
+<!-- Page Context Title & Dossier Badging -->
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-2 border-b border-border-subtle">
+<div>
+<h1 class="text-headline-lg font-headline-lg text-primary tracking-tight">Formulir Permohonan Izin Penggunaan Gedung</h1>
+<p class="text-body-sm font-body-sm text-status-muted mt-1">Lengkapi rincian agenda, verifikasi jadwal, dan kebutuhan logistik pendukung.</p>
+</div>
+<div class="inline-flex items-center gap-2 bg-status-info-surface text-status-info border border-[#BFDBFE] px-3.5 py-1.5 rounded-full text-label-sm font-label-sm self-start md:self-auto">
+<span class="material-symbols-outlined text-[14px]" data-icon="draft">draft</span>
+<span>ID Simulasi: REQ-UJI-001</span>
+</div>
+</div>
+<!-- Stepper 5 Tahap (Top Stepper) -->
+<section aria-label="Tahapan Formulir" class="bg-surface-white border border-border-subtle rounded-xl p-4 md:p-6 shadow-[0_1px_3px_0_rgba(31,41,51,0.04)]">
+<ol class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 md:gap-4 relative">
+<!-- Step 1: Selesai -->
+<li class="flex items-center gap-3 p-2.5 rounded-lg bg-status-success-surface/40 border border-status-success/30">
+<div class="w-8 h-8 rounded-full bg-status-success text-surface-white flex items-center justify-center shrink-0 text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="check">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-caption font-caption text-status-success font-semibold uppercase tracking-wider">Tahap 1 • Selesai</span>
+<span class="text-body-sm-medium font-body-sm-medium text-text-main truncate">Jenis &amp; Kegiatan</span>
+</div>
+</li>
+<!-- Step 2: Aktif (Current) -->
+<li class="flex items-center gap-3 p-2.5 rounded-lg bg-brand-surface-tint border-2 border-primary ring-2 ring-primary/20">
+<div class="w-8 h-8 rounded-full bg-primary text-surface-white flex items-center justify-center shrink-0 text-label-sm font-label-sm font-semibold">
+            2
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="text-caption font-caption text-primary font-bold uppercase tracking-wider">Tahap 2 • Aktif</span>
+<span class="text-body-sm-medium font-body-sm-medium text-primary font-semibold truncate">Gedung &amp; Waktu</span>
+</div>
+</li>
+<!-- Step 3: Belum -->
+<li class="flex items-center gap-3 p-2.5 rounded-lg bg-page-canvas border border-border-subtle opacity-75">
+<div class="w-8 h-8 rounded-full bg-border-subtle text-status-muted flex items-center justify-center shrink-0 text-label-sm font-label-sm">
+            3
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="text-caption font-caption text-status-muted">Tahap 3</span>
+<span class="text-body-sm font-body-sm text-status-muted truncate">Data Pemohon</span>
+</div>
+</li>
+<!-- Step 4: Belum -->
+<li class="flex items-center gap-3 p-2.5 rounded-lg bg-page-canvas border border-border-subtle opacity-75">
+<div class="w-8 h-8 rounded-full bg-border-subtle text-status-muted flex items-center justify-center shrink-0 text-label-sm font-label-sm">
+            4
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="text-caption font-caption text-status-muted">Tahap 4</span>
+<span class="text-body-sm font-body-sm text-status-muted truncate">Tinjau Ringkasan</span>
+</div>
+</li>
+<!-- Step 5: Belum -->
+<li class="flex items-center gap-3 p-2.5 rounded-lg bg-page-canvas border border-border-subtle opacity-75">
+<div class="w-8 h-8 rounded-full bg-border-subtle text-status-muted flex items-center justify-center shrink-0 text-label-sm font-label-sm">
+            5
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="text-caption font-caption text-status-muted">Tahap 5</span>
+<span class="text-body-sm font-body-sm text-status-muted truncate">Konfirmasi</span>
+</div>
+</li>
+</ol>
+</section>
+<!-- Operational Dossier Layout: 12-Column Grid (8 col Form : 4 col Sidebar) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Form Area (8 cols) -->
+<section aria-labelledby="form-heading" class="lg:col-span-8 flex flex-col gap-6">
+<div class="bg-surface-white border border-border-subtle rounded-xl p-6 md:p-8 shadow-[0_1px_3px_0_rgba(31,41,51,0.04)]">
+<div class="border-b border-border-subtle pb-4 mb-6">
+<h2 class="text-headline-md font-headline-md text-primary" id="form-heading">Rincian Kegiatan &amp; Penjadwalan Ruangan</h2>
+<p class="text-body-sm font-body-sm text-status-muted mt-1">Langkah 2 dari 5: Pastikan estimasi peserta dan rentang jam mengakomodasi seluruh rangkaian acara.</p>
+</div>
+<form action="#" class="space-y-6" method="POST">
+<!-- Nama Kegiatan -->
+<div class="space-y-2">
+<label class="block text-label-md font-label-md text-text-main" for="nama_kegiatan">
+                Nama Kegiatan <span aria-hidden="true" class="text-status-danger">*</span>
+</label>
+<div class="relative">
+<input aria-describedby="nama_kegiatan_help" class="w-full min-h-[44px] px-3.5 py-2.5 bg-surface-white border border-border-subtle rounded-lg text-body-lg font-body-lg text-text-main focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none" id="nama_kegiatan" name="nama_kegiatan" required="" type="text" value="Seminar Nasional Teknologi Terapan"/>
+</div>
+<p class="text-caption font-caption text-status-muted" id="nama_kegiatan_help">Gunakan nama resmi sesuai proposal kegiatan sivitas atau lembaga Anda.</p>
+</div>
+<!-- Deskripsi Singkat Kegiatan -->
+<div class="space-y-2">
+<label class="block text-label-md font-label-md text-text-main" for="deskripsi_kegiatan">
+                Deskripsi Singkat Kegiatan <span aria-hidden="true" class="text-status-danger">*</span>
+</label>
+<textarea aria-describedby="deskripsi_help" class="w-full p-3.5 bg-surface-white border border-border-subtle rounded-lg text-body-sm font-body-sm text-text-main focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none" id="deskripsi_kegiatan" name="deskripsi_kegiatan" placeholder="Jelaskan ringkasan tujuan, sasaran audiens, dan susunan umum acara..." required="" rows="3">Seminar diseminasi hasil penelitian terapan bidang vokasi pertanian, informatika, dan rekayasa industri tingkat nasional bersama pemateri eksternal.</textarea>
+<p class="text-caption font-caption text-status-muted" id="deskripsi_help">Membantu verifikator UPT mengevaluasi izin muatan teknis dan keamanan acara.</p>
+</div>
+<!-- Estimasi Peserta -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block text-label-md font-label-md text-text-main" for="estimasi_peserta">
+                  Jumlah Estimasi Peserta <span aria-hidden="true" class="text-status-danger">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 text-status-muted pointer-events-none material-symbols-outlined" data-icon="groups">groups</span>
+<input aria-describedby="peserta_help" class="w-full min-h-[44px] pl-11 pr-3.5 py-2.5 bg-surface-white border border-border-subtle rounded-lg text-body-lg font-body-lg text-text-main focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none" id="estimasi_peserta" min="1" name="estimasi_peserta" type="number" value="450"/>
+</div>
+<p class="text-caption font-caption text-status-muted" id="peserta_help">Isi bila relevan. Kapasitas aktif mengikuti data gedung yang sudah diverifikasi.</p>
+</div>
+<!-- Tanggal Pelaksanaan -->
+<div class="space-y-2">
+<label class="block text-label-md font-label-md text-text-main" for="tanggal_pelaksanaan">
+                  Tanggal Pelaksanaan <span aria-hidden="true" class="text-status-danger">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 text-status-muted pointer-events-none material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<input aria-describedby="tanggal_help" class="w-full min-h-[44px] pl-11 pr-3.5 py-2.5 bg-surface-white border border-border-subtle rounded-lg text-body-lg font-body-lg text-text-main focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none" id="tanggal_pelaksanaan" name="tanggal_pelaksanaan" required="" type="text" value="18 November 2026"/>
+</div>
+<p class="text-caption font-caption text-status-muted" id="tanggal_help">Contoh data prototype: Rabu, 18 November 2026.</p>
+</div>
+</div>
+<!-- Jam Mulai & Jam Selesai -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block text-label-md font-label-md text-text-main" for="jam_mulai">
+                  Jam Mulai <span aria-hidden="true" class="text-status-danger">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 text-status-muted pointer-events-none material-symbols-outlined" data-icon="schedule">schedule</span>
+<input class="w-full min-h-[44px] pl-11 pr-3.5 py-2.5 bg-surface-white border border-border-subtle rounded-lg text-body-lg font-body-lg text-text-main focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none" id="jam_mulai" name="jam_mulai" required="" type="text" value="08:30 WIB"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-label-md font-label-md text-text-main" for="jam_selesai">
+                  Jam Selesai <span aria-hidden="true" class="text-status-danger">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 text-status-muted pointer-events-none material-symbols-outlined" data-icon="schedule">schedule</span>
+<input class="w-full min-h-[44px] pl-11 pr-3.5 py-2.5 bg-surface-white border border-border-subtle rounded-lg text-body-lg font-body-lg text-text-main focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none" id="jam_selesai" name="jam_selesai" required="" type="text" value="16:00 WIB"/>
+</div>
+</div>
+</div>
+<!-- State Penanganan Konflik Ramah Pengguna (Warm Accent Box) -->
+<div class="bg-accent-warm-surface border border-accent-warm/40 rounded-xl p-4 md:p-5 flex items-start gap-3.5 text-status-warning" role="status">
+<div class="w-7 h-7 rounded-full bg-accent-warm/20 text-accent-warm flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]" data-icon="verified">verified</span>
+</div>
+<div class="space-y-1">
+<h3 class="text-label-md font-label-md text-status-warning font-semibold">Status jadwal contoh</h3>
+<p class="text-body-sm font-body-sm text-status-warning leading-relaxed">
+                  Ini hanya contoh tampilan. Belum ada pengajuan atau slot nyata yang tersimpan.
+                </p>
+<p class="text-caption font-caption text-status-warning/90 mt-1">
+                  Periksa ketersediaan aktual melalui kalender resmi setelah data operasional diaktifkan.
+                </p>
+</div>
+</div>
+<!-- Checklist Fasilitas Tambahan -->
+<div class="pt-4 border-t border-border-subtle space-y-3">
+<fieldset>
+<legend class="text-label-md font-label-md text-text-main mb-1">
+                  Kebutuhan Fasilitas Tambahan (Opsional)
+                </legend>
+<p class="text-caption font-caption text-status-muted mb-4">Pilih inventaris sarana pendukung yang diperlukan untuk dipersiapkan tim teknisi Polinela.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+<!-- Fasilitas 1 -->
+<label class="flex items-center gap-3.5 p-3.5 rounded-lg border border-border-subtle hover:border-primary/50 hover:bg-brand-surface-tint/30 transition-all cursor-pointer min-h-[44px]">
+<input checked="" class="w-5 h-5 rounded border-border-subtle text-primary focus:ring-primary focus:ring-2 focus:ring-offset-2" name="fasilitas[]" type="checkbox" value="Sound System 5000W"/>
+<div class="flex flex-col">
+<span class="text-body-sm-medium font-body-sm-medium text-text-main">Sound System 5000W</span>
+<span class="text-caption font-caption text-status-muted">Termasuk 4 mic nirkabel &amp; audio mixer</span>
+</div>
+</label>
+<!-- Fasilitas 2 -->
+<label class="flex items-center gap-3.5 p-3.5 rounded-lg border border-border-subtle hover:border-primary/50 hover:bg-brand-surface-tint/30 transition-all cursor-pointer min-h-[44px]">
+<input checked="" class="w-5 h-5 rounded border-border-subtle text-primary focus:ring-primary focus:ring-2 focus:ring-offset-2" name="fasilitas[]" type="checkbox" value="Proyektor Laser"/>
+<div class="flex flex-col">
+<span class="text-body-sm-medium font-body-sm-medium text-text-main">Proyektor Laser</span>
+<span class="text-caption font-caption text-status-muted">Resolusi WUXGA layar 200 inci panggung utama</span>
+</div>
+</label>
+<!-- Fasilitas 3 -->
+<label class="flex items-center gap-3.5 p-3.5 rounded-lg border border-border-subtle hover:border-primary/50 hover:bg-brand-surface-tint/30 transition-all cursor-pointer min-h-[44px]">
+<input checked="" class="w-5 h-5 rounded border-border-subtle text-primary focus:ring-primary focus:ring-2 focus:ring-offset-2" name="fasilitas[]" type="checkbox" value="Podium Resmi"/>
+<div class="flex flex-col">
+<span class="text-body-sm-medium font-body-sm-medium text-text-main">Podium Resmi</span>
+<span class="text-caption font-caption text-status-muted">Dilengkapi emblem Polinela dan mic gooseneck</span>
+</div>
+</label>
+<!-- Fasilitas 4 -->
+<label class="flex items-center gap-3.5 p-3.5 rounded-lg border border-border-subtle hover:border-primary/50 hover:bg-brand-surface-tint/30 transition-all cursor-pointer min-h-[44px]">
+<input class="w-5 h-5 rounded border-border-subtle text-primary focus:ring-primary focus:ring-2 focus:ring-offset-2" name="fasilitas[]" type="checkbox" value="Kursi Tambahan"/>
+<div class="flex flex-col">
+<span class="text-body-sm-medium font-body-sm-medium text-text-main">Kursi Tambahan</span>
+<span class="text-caption font-caption text-status-muted">100 unit kursi banquet berbalut cover hitam</span>
+</div>
+</label>
+</div>
+</fieldset>
+</div>
+</form>
+</div>
+</section>
+<!-- Panel Ringkasan di Sisi Samping (4 cols) -->
+<aside aria-labelledby="ringkasan-heading" class="lg:col-span-4 flex flex-col gap-6">
+<div class="bg-surface-white border border-border-subtle rounded-xl p-5 md:p-6 shadow-[0_1px_3px_0_rgba(31,41,51,0.04)] sticky top-24 space-y-6">
+<div class="border-b border-border-subtle pb-4">
+<span class="text-caption font-caption uppercase tracking-wider text-status-muted font-semibold">Tinjauan Sementara</span>
+<h2 class="text-headline-sm font-headline-sm text-primary mt-1" id="ringkasan-heading">Dossier Pengajuan</h2>
+</div>
+<!-- Gedung yang Dipilih Card -->
+<div class="space-y-3">
+<div class="overflow-hidden rounded-lg border border-border-subtle relative aspect-video bg-surface-dim">
+<img class="w-full h-full object-cover" data-alt="The grand interior of an institutional university hall at Politeknik Negeri Lampung, featuring a polished wooden stage, elegant auditorium seating with soft ambient light, and high acoustic ceiling panels. The architectural composition emphasizes deep collegiate greens and clean neutral surfaces under balanced daylight, creating an authoritative and modern campus aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnoqdMVzX9ji7gjyhHO2HuspXJN6NdTtjAzAFa3wo-GXeBcojShr8fhJOt-7dk7W_1wznPrXF0J7kL2M4v63oFP-uVWIRODdzB0aTtiUO8Du5lVYN7kSjTw7lYRo88SF2DEhxnn4ibUBBaHupmuTHtoCCPxyiDtNmCRzk4GO1W-qSJZopSqzQrB1rKgqSiV5Tg6-zogem7OZ-DcfxCOSGFm9J3o90xMw9sEHFPxBk"/>
+<div class="absolute bottom-2 left-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-inverse-surface/90 text-surface-white text-caption font-caption">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+<span>Kampus Utama Polinela</span>
+</div>
+</div>
+<div>
+<span class="text-caption font-caption text-status-muted">Gedung Terpilih:</span>
+<p class="text-body-lg-medium font-body-lg-medium text-text-main font-semibold">Gedung Serbaguna Polinela</p>
+<div class="flex items-center gap-2 mt-1 text-caption font-caption text-status-muted">
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="domain">domain</span> Zona A-1</span>
+<span>•</span>
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="chair">chair</span> Kapasitas menunggu validasi</span>
+</div>
+</div>
+</div>
+<div class="h-px bg-border-subtle"></div>
+<!-- Waktu Pelaksanaan -->
+<div class="space-y-2">
+<span class="text-caption font-caption text-status-muted font-medium">Jadwal &amp; Waktu Contoh:</span>
+<div class="flex items-start gap-3 bg-brand-surface-tint/50 p-3 rounded-lg border border-border-subtle">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5" data-icon="event">event</span>
+<div>
+<p class="text-body-sm-medium font-body-sm-medium text-text-main font-semibold">18 Nov 2026</p>
+<p class="text-body-sm font-body-sm text-status-muted">08:30 - 16:00 WIB • contoh, belum operasional</p>
+</div>
+</div>
+</div>
+<!-- Status Tarif / Biaya (Non-Color Dependent Accessible Helper) -->
+<div class="space-y-2">
+<span class="text-caption font-caption text-status-muted font-medium">Status Tarif Retribusi:</span>
+<div class="p-3.5 rounded-lg bg-status-muted-surface border border-border-subtle flex items-start gap-2.5">
+<span class="material-symbols-outlined text-status-muted text-[18px] shrink-0 mt-0.5" data-icon="info">info</span>
+<div class="space-y-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-caption font-caption font-semibold bg-status-info-surface text-status-info">
+<span class="material-symbols-outlined text-[12px]" data-icon="pending">pending</span>
+                  Sedang diperiksa
+                </span>
+<p class="text-caption font-caption text-status-muted leading-relaxed">
+                  Simulasi saja. Tarif BLU bersumber dari SK; pemetaan gedung dan verifier harus dikonfirmasi.
+                </p>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-caption font-caption text-text-main font-semibold" for="kategori-pemohon">Kategori pemohon</label>
+<select class="w-full min-h-[44px] rounded-lg border border-border-subtle bg-surface-white px-3 py-2 text-body-sm" id="kategori-pemohon" name="kategori-pemohon" aria-describedby="kategori-pemohon-note">
+<option value="mahasiswa" selected>Mahasiswa</option>
+<option value="internal">Dosen / pegawai</option>
+<option value="publik">Masyarakat umum</option>
+</select>
+<p class="text-caption font-caption text-status-muted" id="kategori-pemohon-note">Produksi nonaktif. Alur keputusan menggunakan assignment yang ditetapkan pengelola, bukan nama jabatan yang tertanam.</p>
+</div>
+<div class="space-y-2 rounded-lg border border-border-subtle bg-page-canvas p-3.5" id="persyaratan-mahasiswa">
+<label class="block text-caption font-caption text-text-main font-semibold" for="berkas-mahasiswa">Berkas peminjaman gedung untuk mahasiswa</label>
+<input accept="application/pdf,.pdf" class="block w-full rounded-lg border border-border-subtle bg-surface-white p-2 text-caption" id="berkas-mahasiswa" name="berkas-mahasiswa" type="file" aria-describedby="berkas-mahasiswa-note" />
+<p class="text-caption font-caption text-status-muted" id="berkas-mahasiswa-note">Baseline proyek: satu PDF maksimal 5 MB. Preview hanya memeriksa pilihan file lokal dan tidak mengunggah/menyimpan berkas. Tidak ada approval WD III; pengelola meninjau dan mencatat tindak lanjut.</p>
+<p class="text-caption font-caption text-status-danger" id="berkas-mahasiswa-error" role="status" aria-live="polite"></p>
+</div>
+<div class="h-px bg-border-subtle"></div>
+<!-- Tombol Navigasi Wizard -->
+<div class="space-y-3 pt-1">
+<button class="w-full min-h-[44px] px-5 py-2.5 rounded-lg bg-primary text-surface-white font-body-sm-medium text-body-sm-medium font-semibold hover:bg-[#173B32] transition-colors duration-150 flex items-center justify-center gap-2 active:scale-[0.98] shadow-sm" type="button">
+<span>Lanjut ke Data Pemohon</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="w-full min-h-[44px] px-5 py-2.5 rounded-lg bg-transparent border border-border-subtle text-text-main font-body-sm-medium text-body-sm-medium hover:bg-brand-surface-tint hover:text-primary transition-colors duration-150 flex items-center justify-center gap-2 active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_back">arrow_back</span>
+<span>Kembali</span>
+</button>
+</div>
+<!-- Accessibility Note / Guarantee -->
+<div class="pt-2 text-center">
+<p class="text-caption font-caption text-status-muted flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="lock">lock</span>
+<span>Data contoh tidak disimpan oleh prototipe</span>
+</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Institutional Footer (Shared Component from JSON) -->
+<footer class="docked full-width bottom w-full bg-page-canvas dark:bg-inverse-surface border-t border-border-subtle dark:border-outline-variant mt-16">
+<div class="max-w-[1200px] mx-auto px-4 lg:px-6 py-12 flex flex-col gap-8 w-full">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div>
+<span class="text-headline-sm font-headline-sm text-primary dark:text-inverse-primary tracking-tight">VenueConnect Polinela</span>
+<p class="text-body-sm font-body-sm text-status-muted mt-1 max-w-md">Layanan administrasi peminjaman dan penggunaan ruang pertemuan, aula, laboratorium, dan gedung serbaguna Politeknik Negeri Lampung.</p>
+</div>
+<!-- Institutional Links -->
+<nav aria-label="Tautan Bantuan Kampus" class="flex flex-wrap gap-x-6 gap-y-2">
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary font-body-sm text-body-sm hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none rounded" href="#">Panduan Penggunaan</a>
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary font-body-sm text-body-sm hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none rounded" href="#">Kebijakan Privasi</a>
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary font-body-sm text-body-sm hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none rounded" href="#">Ketentuan Layanan</a>
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary font-body-sm text-body-sm hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none rounded" href="#">Kontak Pengelola UPT</a>
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary font-body-sm text-body-sm hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none rounded" href="#">Peta Kampus</a>
+</nav>
+</div>
+<div class="pt-6 border-t border-border-subtle dark:border-outline-variant flex flex-col sm:flex-row items-center justify-between gap-4 text-caption font-caption text-status-muted">
+<p>Pratinjau desain proyek VenueConnect Polinela. Data dan transaksi produksi belum aktif.</p>
+<p class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-status-success inline-block"></span>
+<span>Pratinjau • Tidak terhubung dengan transaksi aktual</span>
+</p>
+</div>
+</div>
+</footer>
+  <script>
+    (() => {
+      const category = document.getElementById('kategori-pemohon');
+      const documentPanel = document.getElementById('persyaratan-mahasiswa');
+      const fileInput = document.getElementById('berkas-mahasiswa');
+      const fileError = document.getElementById('berkas-mahasiswa-error');
+      const categoryNote = document.getElementById('kategori-pemohon-note');
+      if (!category || !documentPanel || !fileInput || !fileError) return;
+
+      const syncCategory = () => {
+        const isStudent = category.value === 'mahasiswa';
+        documentPanel.hidden = !isStudent;
+        fileInput.required = isStudent;
+        if (!isStudent) {
+          fileInput.value = '';
+          fileError.textContent = '';
+          categoryNote.textContent = category.value === 'publik'
+            ? 'Alur sewa mengikuti proses aset BLU; approver dan instruksi pembayaran berasal dari assignment resmi.'
+            : 'Pengelola memeriksa pengajuan dan meneruskan keputusan melalui assignment resmi; jabatan approver belum ditetapkan.';
+        } else {
+          categoryNote.textContent = 'Produksi nonaktif. Alur keputusan mahasiswa tidak memiliki approval WD III dan tidak disetujui otomatis.';
+        }
+      };
+
+      category.addEventListener('change', syncCategory);
+      fileInput.addEventListener('change', () => {
+        fileError.textContent = '';
+        fileError.classList.remove('text-status-success');
+        fileError.classList.add('text-status-danger');
+        const file = fileInput.files && fileInput.files[0];
+        if (!file) return;
+        if (file.type !== 'application/pdf' || !file.name.toLowerCase().endsWith('.pdf')) {
+          fileError.textContent = 'Pilih satu berkas PDF.';
+          fileInput.value = '';
+          return;
+        }
+        if (file.size > 5 * 1024 * 1024) {
+          fileError.textContent = 'Ukuran berkas melebihi batas baseline 5 MB.';
+          fileInput.value = '';
+          return;
+        }
+        fileError.textContent = 'Pilihan lokal valid untuk pratinjau. Berkas belum diunggah atau disimpan.';
+        fileError.classList.remove('text-status-danger');
+        fileError.classList.add('text-status-success');
+      });
+      syncCategory();
+    })();
+  </script>
+  <script src="../prototype-nav.js" defer></script>
+</body></html>

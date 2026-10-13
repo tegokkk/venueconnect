@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Katalog Gedung &amp; Fasilitas - VenueConnect Polinela</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-surface": "#111d26",
+            "primary-fixed": "#b5eedb",
+            "on-secondary-fixed-variant": "#2a4d44",
+            "secondary-container": "#c1e8db",
+            "status-danger": "#9B1C1C",
+            "surface-bright": "#f6f9ff",
+            "tertiary": "#004536",
+            "on-background": "#111d26",
+            "on-error-container": "#93000a",
+            "surface-variant": "#d8e4f1",
+            "status-info-surface": "#EBF5FF",
+            "tertiary-container": "#0f5e4b",
+            "inverse-primary": "#99d2bf",
+            "surface-container-low": "#ebf5ff",
+            "outline": "#707975",
+            "on-tertiary-container": "#8ed5bd",
+            "tertiary-fixed": "#a9f1d8",
+            "brand-surface-tint": "#E8F2EE",
+            "inverse-on-surface": "#e6f2ff",
+            "primary-container": "#245c4d",
+            "on-primary-fixed-variant": "#155041",
+            "status-danger-surface": "#FDE8E8",
+            "on-primary-container": "#99d2bf",
+            "accent-warm-surface": "#FFF4D6",
+            "text-main": "#1F2933",
+            "on-primary-fixed": "#002018",
+            "status-success": "#0E6245",
+            "on-primary": "#ffffff",
+            "status-muted": "#4B5563",
+            "surface-dim": "#cfdbe8",
+            "status-warning-surface": "#FEF08A",
+            "secondary": "#42655b",
+            "outline-variant": "#bfc9c4",
+            "primary": "#034436",
+            "on-secondary-fixed": "#002019",
+            "inverse-surface": "#26323b",
+            "surface-white": "#FFFFFF",
+            "surface-container-highest": "#d8e4f1",
+            "primary-fixed-dim": "#99d2bf",
+            "on-error": "#ffffff",
+            "accent-warm": "#B7791F",
+            "error-container": "#ffdad6",
+            "status-warning": "#8F4B0E",
+            "status-info": "#1E429F",
+            "on-secondary-container": "#466a5f",
+            "status-muted-surface": "#F3F4F6",
+            "tertiary-fixed-dim": "#8ed4bc",
+            "surface": "#f6f9ff",
+            "on-tertiary-fixed-variant": "#005140",
+            "error": "#ba1a1a",
+            "surface-container-high": "#ddeaf7",
+            "surface-tint": "#316858",
+            "on-tertiary-fixed": "#002018",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#c4ebde",
+            "on-secondary": "#ffffff",
+            "surface-container": "#e3effc",
+            "on-tertiary": "#ffffff",
+            "secondary-fixed-dim": "#a8cfc2",
+            "status-success-surface": "#DEF7EC",
+            "page-canvas": "#F6F8F7",
+            "border-subtle": "#D8E0E5",
+            "on-surface-variant": "#404945",
+            "background": "#f6f9ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-mobile": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "margin-mobile": "1rem",
+            "space-xl": "2rem",
+            "space-lg": "1.5rem",
+            "margin": "2rem",
+            "gutter": "1.5rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Inter"],
+            "body-sm-medium": ["Inter"],
+            "body-lg-medium": ["Inter"],
+            "headline-lg": ["Inter"],
+            "headline-xl": ["Inter"],
+            "label-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "headline-xl-mobile": ["Inter"],
+            "headline-sm": ["Inter"],
+            "headline-lg-mobile": ["Inter"],
+            "caption": ["Inter"],
+            "headline-md": ["Inter"],
+            "body-sm": ["Inter"]
+          },
+          "fontSize": {
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-sm-medium": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "body-lg-medium": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-page-canvas text-text-main font-body-sm antialiased min-h-screen flex flex-col">
+<!-- TopNavBar Shared Component -->
+<header class="docked full-width top-0 sticky z-50 bg-surface-white dark:bg-inverse-surface border-b border-border-subtle dark:border-outline-variant shadow-sm dark:shadow-none">
+<div class="max-w-[1200px] mx-auto px-4 lg:px-6 h-16 flex items-center justify-between w-full">
+<!-- Brand Logo & Identity -->
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2.5 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg p-1" href="#">
+<div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-surface-white">
+<span class="material-symbols-outlined text-[22px]" data-icon="apartment">apartment</span>
+</div>
+<div>
+<span class="text-headline-sm font-headline-sm text-primary dark:text-inverse-primary tracking-tight">VenueConnect Polinela</span>
+</div>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary font-body-lg-medium text-body-lg-medium pb-1 transition-colors duration-150" href="#">Gedung</a>
+<a class="text-text-main dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-body-sm-medium text-body-sm-medium transition-colors duration-150" href="#">Jadwal</a>
+<a class="text-text-main dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-body-sm-medium text-body-sm-medium transition-colors duration-150" href="#">Prosedur</a>
+<a class="text-text-main dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-body-sm-medium text-body-sm-medium transition-colors duration-150" href="#">Bantuan/AI</a>
+</nav>
+</div>
+<!-- Trailing Icon Actions & Primary CTA -->
+<div class="flex items-center gap-3">
+<button aria-label="Notifikasi" class="w-10 h-10 rounded-lg flex items-center justify-center text-text-main hover:bg-brand-surface-tint dark:hover:bg-surface-variant transition-colors duration-150 active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="notifications">notifications</span>
+</button>
+<button aria-label="Bantuan" class="w-10 h-10 rounded-lg flex items-center justify-center text-text-main hover:bg-brand-surface-tint dark:hover:bg-surface-variant transition-colors duration-150 active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="help">help</span>
+</button>
+<div class="h-6 w-px bg-border-subtle mx-1 hidden sm:block"></div>
+<button class="h-10 px-5 rounded-lg bg-primary text-surface-white font-label-md text-label-md hover:bg-tertiary active:scale-[0.98] transition-all duration-150 shadow-sm flex items-center justify-center" type="button">
+          Masuk
+        </button>
+</div>
+</div>
+</header>
+<!-- Main Canvas Container -->
+<main class="max-w-[1200px] mx-auto px-4 lg:px-6 py-6 w-full flex-1 flex flex-col gap-6">
+<!-- Breadcrumb Bar -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-caption font-caption text-status-muted">
+<a class="hover:text-primary transition-colors flex items-center gap-1 font-body-sm text-body-sm" href="#">
+<span class="material-symbols-outlined text-[16px]" data-icon="home">home</span>
+        Beranda
+      </a>
+<span class="material-symbols-outlined text-[14px] text-outline-variant" data-icon="chevron_right">chevron_right</span>
+<span aria-current="page" class="text-primary font-body-sm-medium text-body-sm-medium">Katalog Gedung</span>
+</nav>
+<!-- Administrative Informative Alert -->
+<div class="bg-status-info-surface border border-status-info/20 rounded-xl p-4 flex items-start gap-3.5 shadow-sm">
+<span class="material-symbols-outlined text-status-info text-[22px] mt-0.5 shrink-0" data-icon="info">info</span>
+<div class="flex-1 text-status-info text-body-sm font-body-sm leading-relaxed">
+<strong>Pemberitahuan Sistem:</strong> Kalender dan ketersediaan selalu diperbarui secara berkala sesuai zona waktu WIB. Konfirmasi ketersediaan resmi tetap tunduk pada verifikasi Pengelola Fasilitas UPT Polinela.
+      </div>
+</div>
+<!-- Title & Catalog Overview Header -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-2 border-b border-border-subtle">
+<div>
+<h1 class="text-headline-xl font-headline-xl text-primary tracking-tight">Daftar Gedung &amp; Ruang Kampus</h1>
+<p class="text-status-muted text-body-sm font-body-sm mt-1">Fasilitas resmi Politeknik Negeri Lampung untuk kegiatan akademik, seminar, sidang, dan acara umum terdaftar.</p>
+</div>
+<div class="inline-flex items-center gap-2 bg-brand-surface-tint text-primary px-3.5 py-1.5 rounded-full text-label-sm font-label-sm shrink-0 border border-secondary-container">
+<span class="w-2 h-2 rounded-full bg-status-success inline-block"></span>
+        Menampilkan 6 gedung tersedia
+      </div>
+</div>
+<!-- Layout Grid: 4-col Sidebar Filter + 8-col / 3-col Catalog Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Left Filter Toolbar / Aside (4 Columns) -->
+<aside class="lg:col-span-4 bg-surface-white border border-border-subtle rounded-xl p-5 shadow-sm space-y-6 sticky top-24">
+<div class="flex items-center justify-between border-b border-border-subtle pb-3">
+<div class="flex items-center gap-2 text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="tune">tune</span>
+            Filter Fasilitas
+          </div>
+<button class="text-caption font-caption text-status-muted hover:text-status-danger transition-colors underline focus:outline-none" type="button">
+            Reset Filter
+          </button>
+</div>
+<form class="space-y-5" onsubmit="event.preventDefault();">
+<!-- Keyword Search Input -->
+<div class="space-y-1.5">
+<label class="text-label-md font-label-md text-text-main flex items-center justify-between" for="search-input">
+              Pencarian Kata Kunci
+            </label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-3 text-[20px] text-status-muted" data-icon="search">search</span>
+<input class="w-full pl-10 pr-3.5 py-2.5 h-11 bg-surface-white border border-border-subtle rounded-lg text-body-sm font-body-sm text-text-main placeholder-status-muted focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all" id="search-input" placeholder="Nama gedung, aula, atau lab..." type="text"/>
+</div>
+</div>
+<!-- Pilihan Kategori -->
+<div class="space-y-2">
+<label class="text-label-md font-label-md text-text-main block">Kategori Pemakaian</label>
+<div class="grid grid-cols-2 gap-2">
+<label class="flex items-center p-2.5 rounded-lg border border-border-subtle hover:bg-brand-surface-tint cursor-pointer text-body-sm transition-colors">
+<input checked="" class="w-4 h-4 text-primary focus:ring-primary border-border-subtle" name="kategori" type="radio"/>
+<span class="ml-2 font-body-sm-medium text-body-sm-medium text-text-main">Akademik</span>
+</label>
+<label class="flex items-center p-2.5 rounded-lg border border-border-subtle hover:bg-brand-surface-tint cursor-pointer text-body-sm transition-colors">
+<input class="w-4 h-4 text-primary focus:ring-primary border-border-subtle" name="kategori" type="radio"/>
+<span class="ml-2 font-body-sm-medium text-body-sm-medium text-text-main">Penyewaan Umum</span>
+</label>
+</div>
+</div>
+<!-- Filter Kapasitas -->
+<div class="space-y-2">
+<label class="text-label-md font-label-md text-text-main block">Filter Kapasitas Peserta</label>
+<div class="space-y-2">
+<label class="flex items-center justify-between p-2 rounded-md hover:bg-page-canvas cursor-pointer">
+<span class="flex items-center text-body-sm font-body-sm text-text-main">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary border-border-subtle mr-2.5" type="checkbox"/>
+                  Kecil (&lt; 50 orang)
+                </span>
+<span class="text-caption font-caption text-status-muted bg-status-muted-surface px-2 py-0.5 rounded">2</span>
+</label>
+<label class="flex items-center justify-between p-2 rounded-md hover:bg-page-canvas cursor-pointer">
+<span class="flex items-center text-body-sm font-body-sm text-text-main">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary border-border-subtle mr-2.5" type="checkbox"/>
+                  Sedang (50 - 200 orang)
+                </span>
+<span class="text-caption font-caption text-status-muted bg-status-muted-surface px-2 py-0.5 rounded">2</span>
+</label>
+<label class="flex items-center justify-between p-2 rounded-md hover:bg-page-canvas cursor-pointer">
+<span class="flex items-center text-body-sm font-body-sm text-text-main">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary border-border-subtle mr-2.5" type="checkbox"/>
+                  Besar (200+ orang)
+                </span>
+<span class="text-caption font-caption text-status-muted bg-status-muted-surface px-2 py-0.5 rounded">2</span>
+</label>
+</div>
+</div>
+<!-- Fasilitas Tersedia -->
+<div class="space-y-2">
+<label class="text-label-md font-label-md text-text-main block">Fasilitas Penunjang</label>
+<div class="grid grid-cols-2 gap-2 text-body-sm">
+<label class="flex items-center p-2 rounded hover:bg-page-canvas cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary border-border-subtle mr-2" type="checkbox"/>
+<span>Audio System</span>
+</label>
+<label class="flex items-center p-2 rounded hover:bg-page-canvas cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary border-border-subtle mr-2" type="checkbox"/>
+<span>Proyektor</span>
+</label>
+<label class="flex items-center p-2 rounded hover:bg-page-canvas cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary border-border-subtle mr-2" type="checkbox"/>
+<span>AC Sentral</span>
+</label>
+<label class="flex items-center p-2 rounded hover:bg-page-canvas cursor-pointer">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary border-border-subtle mr-2" type="checkbox"/>
+<span>Panggung</span>
+</label>
+</div>
+</div>
+<!-- Lokasi Kampus -->
+<div class="space-y-1.5">
+<label class="text-label-md font-label-md text-text-main block" for="lokasi-select">Lokasi Kampus</label>
+<div class="relative">
+<select class="w-full h-11 px-3.5 bg-surface-white border border-border-subtle rounded-lg text-body-sm font-body-sm text-text-main focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all" id="lokasi-select">
+<option value="utama">Kampus Utama Polinela (Bandar Lampung)</option>
+<option value="kampus2">Kampus 2 - Pusat Riset Terpadu</option>
+</select>
+</div>
+</div>
+<!-- Filter Action Buttons -->
+<div class="pt-3 border-t border-border-subtle flex flex-col gap-2">
+<button class="w-full h-11 bg-primary text-surface-white font-label-md text-label-md rounded-lg hover:bg-tertiary transition-colors flex items-center justify-center gap-2 active:scale-[0.98]" type="submit">
+<span class="material-symbols-outlined text-[18px]" data-icon="filter_alt">filter_alt</span>
+              Terapkan Filter
+            </button>
+<button class="w-full h-10 bg-transparent border border-border-subtle text-text-main hover:bg-brand-surface-tint font-label-md text-label-md rounded-lg transition-colors flex items-center justify-center active:scale-[0.98]" type="button">
+              Reset Filter
+            </button>
+</div>
+</form>
+</aside>
+<!-- Right Venue Grid Container (8 Columns Desktop -> Nested 2 cols or reflow to 3-col catalog) -->
+<div class="lg:col-span-8">
+<!-- Active Filter Indicator Bar -->
+<div class="mb-4 flex flex-wrap items-center justify-between gap-3 bg-surface-white border border-border-subtle p-3 rounded-xl">
+<div class="flex items-center flex-wrap gap-2 text-caption">
+<span class="text-status-muted font-body-sm-medium text-body-sm-medium">Filter Aktif:</span>
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary px-2.5 py-1 rounded-full text-caption font-caption">
+              Sedang (50-200) &amp; Besar (200+)
+              <button aria-label="Hapus filter" class="hover:text-status-danger ml-1"><span class="material-symbols-outlined text-[14px]" data-icon="close">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary px-2.5 py-1 rounded-full text-caption font-caption">
+              Audio, Proyektor, AC
+              <button aria-label="Hapus filter" class="hover:text-status-danger ml-1"><span class="material-symbols-outlined text-[14px]" data-icon="close">close</span></button>
+</span>
+</div>
+<div class="flex items-center gap-2 text-caption text-status-muted">
+<span>Urutkan:</span>
+<select class="border-0 bg-transparent text-primary font-body-sm-medium text-body-sm-medium text-caption p-0 focus:ring-0 cursor-pointer">
+<option>Kapasitas Terbesar</option>
+<option>Nama A-Z</option>
+<option>Ketersediaan Terdekat</option>
+</select>
+</div>
+</div>
+<!-- Catalog Cards (Desktop 2-col in this layout view, responsive down to 1-col) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<!-- CARD 1: Gedung Serbaguna (GSG) -->
+<article class="bg-surface-white border border-border-subtle rounded-xl overflow-hidden hover:border-primary hover:shadow-md transition-all flex flex-col group">
+<div class="relative aspect-[16/9] w-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="An expansive modern campus grand hall and convention auditorium in Politeknik Negeri Lampung, featuring a polished wooden stage, acoustic wall paneling in dark emerald tones, elegant stadium-style seating, bright ambient architectural lighting, clean structural interior architecture, captured in high-clarity professional photograph style with institutional crispness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4_xaqePmz3QYskLkBo1Nuhr6KTH_m3WDgQriExcVz44XdoziQyZdd2kYJqbvCTXdiablRRWpz5fJS-fE8EiEd3Ac_9M9bO2YUXWwMQa8yjARrTIlPNXdvJvifktYcs3gIuEk-sHmbs53DpLLIIHwrcFYY53AuxQiplGHBbYVP6UevzFeMgWMgMgg5YgJuk3OpBMMbAE5CAU9_KtiQPYqwMOn8dr_WzlOxLBVr7Oc"/>
+<div class="absolute top-3 right-3">
+<span class="inline-flex items-center gap-1.5 h-[26px] px-2.5 rounded-full text-[12px] font-semibold bg-status-success-surface text-status-success shadow-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span>
+                  Tersedia
+                </span>
+</div>
+<div class="absolute bottom-3 left-3 bg-surface-white/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-caption font-caption text-primary flex items-center gap-1.5 border border-border-subtle">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                Kampus Utama Polinela
+              </div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h2 class="text-headline-sm font-headline-sm text-text-main group-hover:text-primary transition-colors">Gedung Serbaguna (GSG)</h2>
+<div class="flex items-center gap-2 mt-1 text-status-muted text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="groups">groups</span>
+<span>Kapasitas: <strong class="text-text-main">1.200 Peserta</strong></span>
+</div>
+<!-- Chips/Tags Fasilitas -->
+<div class="flex flex-wrap gap-1.5 mt-3.5">
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="mic">mic</span> Audio Pro
+                  </span>
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="videocam">videocam</span> Proyektor Ganda
+                  </span>
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="ac_unit">ac_unit</span> AC Sentral
+                  </span>
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="podium">podium</span> Panggung
+                  </span>
+</div>
+</div>
+<div class="pt-3 border-t border-border-subtle flex flex-col gap-3">
+<div class="bg-page-canvas p-2.5 rounded-lg border border-border-subtle/60 flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-accent-warm mt-0.5 shrink-0" data-icon="receipt_long">receipt_long</span>
+<p class="text-caption font-caption text-status-muted leading-tight">
+                    Informasi tarif akan ditampilkan setelah diverifikasi pengelola
+                  </p>
+</div>
+<button class="w-full h-11 rounded-lg bg-surface-white border border-border-subtle hover:bg-brand-surface-tint hover:border-primary text-primary font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5 active:scale-[0.98]" type="button">
+<span>Lihat Detail</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 2: Aula Pertanian Terpadu -->
+<article class="bg-surface-white border border-border-subtle rounded-xl overflow-hidden hover:border-primary hover:shadow-md transition-all flex flex-col group">
+<div class="relative aspect-[16/9] w-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A brightly lit university seminar hall with clean ergonomic lecture chairs, podium in center stage, large wall projector screen active, emerald accents on columns, crisp academic architectural design within a tropical campus environment at Polinela, captured in natural bright daylit realism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXXv8jbWYgkoQja8OczAo9JfA2stW9VzsvEm6ivd1f2i-6zoQNLorDWn2CEWuIuUAVH5rfV1dUrmfsTSJ9NRoWogIjNA3hCDDKZ-0xGycCcTNPn1w281ILMk_sEasqem1kbfsXZsunEEWoA32yu2JFLOp3u-4n8wIRBz2Eu9UGV6T7cE8WGXQcdzxWoyk2rDgnEEhqs5C3nFR2GnEaGTpS-50tcSukW84hnLfaGmw"/>
+<div class="absolute top-3 right-3">
+<span class="inline-flex items-center gap-1.5 h-[26px] px-2.5 rounded-full text-[12px] font-semibold bg-status-success-surface text-status-success shadow-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span>
+                  Tersedia
+                </span>
+</div>
+<div class="absolute bottom-3 left-3 bg-surface-white/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-caption font-caption text-primary flex items-center gap-1.5 border border-border-subtle">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                Sektor Agro Kampus Utama
+              </div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h2 class="text-headline-sm font-headline-sm text-text-main group-hover:text-primary transition-colors">Aula Pertanian Terpadu</h2>
+<div class="flex items-center gap-2 mt-1 text-status-muted text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="groups">groups</span>
+<span>Kapasitas: <strong class="text-text-main">350 Peserta</strong></span>
+</div>
+<!-- Chips/Tags Fasilitas -->
+<div class="flex flex-wrap gap-1.5 mt-3.5">
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="mic">mic</span> Sound Standar
+                  </span>
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="tv">tv</span> Proyektor Laser
+                  </span>
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="ac_unit">ac_unit</span> AC Sentral
+                  </span>
+</div>
+</div>
+<div class="pt-3 border-t border-border-subtle flex flex-col gap-3">
+<div class="bg-page-canvas p-2.5 rounded-lg border border-border-subtle/60 flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-accent-warm mt-0.5 shrink-0" data-icon="receipt_long">receipt_long</span>
+<p class="text-caption font-caption text-status-muted leading-tight">
+                    Informasi tarif akan ditampilkan setelah diverifikasi pengelola
+                  </p>
+</div>
+<button class="w-full h-11 rounded-lg bg-surface-white border border-border-subtle hover:bg-brand-surface-tint hover:border-primary text-primary font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5 active:scale-[0.98]" type="button">
+<span>Lihat Detail</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 3: Laboratorium Komputer Terpadu -->
+<article class="bg-surface-white border border-border-subtle rounded-xl overflow-hidden hover:border-primary hover:shadow-md transition-all flex flex-col group">
+<div class="relative aspect-[16/9] w-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A high-tech university computer laboratory with modern terminal work stations, clean cable management, server racks visible through glass partition, cool temperature blue-tinted overhead LED lighting, institutional deep green wall trims, meticulously organized campus computing facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGSfrDMa55m_2HPAJ6YJzz0MWwDRCqF_ruZMiZAdsGfRXeAtJJNaTaR3X-2Xv2QZjdICLYSV5XRVj0FYdavkdbZssKSg8MC7NE9j4oVOuBrc8RoCGjX54tXRWQcmtftQkE4ER6oMGhdpaOfYJEqf1DWiTwKTBh1j0afhSiuN00Ip6U_2bemlQwI-9LooLhiUYwXm9HGX5Mxv29qsqR1BxqcZoocmh85Gn4k9f2Ru4"/>
+<div class="absolute top-3 right-3">
+<span class="inline-flex items-center gap-1.5 h-[26px] px-2.5 rounded-full text-[12px] font-semibold bg-status-info-surface text-status-info shadow-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span>
+                  Terbatas (Jadwal Ujian)
+                </span>
+</div>
+<div class="absolute bottom-3 left-3 bg-surface-white/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-caption font-caption text-primary flex items-center gap-1.5 border border-border-subtle">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                Gedung TI Lt. 3
+              </div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h2 class="text-headline-sm font-headline-sm text-text-main group-hover:text-primary transition-colors">Laboratorium Komputer Terpadu</h2>
+<div class="flex items-center gap-2 mt-1 text-status-muted text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="groups">groups</span>
+<span>Kapasitas: <strong class="text-text-main">80 Workstation</strong></span>
+</div>
+<!-- Chips/Tags Fasilitas -->
+<div class="flex flex-wrap gap-1.5 mt-3.5">
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="lan">lan</span> Gigabyte LAN
+                  </span>
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="ac_unit">ac_unit</span> Dual AC
+                  </span>
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="tv">tv</span> Interactive Display
+                  </span>
+</div>
+</div>
+<div class="pt-3 border-t border-border-subtle flex flex-col gap-3">
+<div class="bg-page-canvas p-2.5 rounded-lg border border-border-subtle/60 flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-accent-warm mt-0.5 shrink-0" data-icon="receipt_long">receipt_long</span>
+<p class="text-caption font-caption text-status-muted leading-tight">
+                    Informasi tarif akan ditampilkan setelah diverifikasi pengelola
+                  </p>
+</div>
+<button class="w-full h-11 rounded-lg bg-surface-white border border-border-subtle hover:bg-brand-surface-tint hover:border-primary text-primary font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5 active:scale-[0.98]" type="button">
+<span>Lihat Detail</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 4: Ruang Sidang Utama -->
+<article class="bg-surface-white border border-border-subtle rounded-xl overflow-hidden hover:border-primary hover:shadow-md transition-all flex flex-col group">
+<div class="relative aspect-[16/9] w-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="An executive campus boardroom and conference hall with a large oval conference table, premium leather executive chairs, individual delegate microphones, national emblem at the front wood veneer wall, sophisticated institutional ambient lighting, representing prestigious academic decision chambers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi4oCvkzHRPbMJkkiS_pulwP-raXfDC9zABhuQVMh6UyCt4mVJAjfGX65Q7tcG3Cqu_-nfmqLt_F0k3w_4guNKyGWJcmR2oPVpDYYtGflMxN36bFtpJF1ySwXV2NH0MqRTqS-2aw6VlWX895hp6YwLo4Jd85kieVE0XDpBvAtwPWwLxD1VdLVmyUYPBZW7QZ5xnKzsqBoyBiHYgtwlhbMeeROT5b0CjjE9zgKWoL4"/>
+<div class="absolute top-3 right-3">
+<span class="inline-flex items-center gap-1.5 h-[26px] px-2.5 rounded-full text-[12px] font-semibold bg-status-success-surface text-status-success shadow-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span>
+                  Tersedia
+                </span>
+</div>
+<div class="absolute bottom-3 left-3 bg-surface-white/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-caption font-caption text-primary flex items-center gap-1.5 border border-border-subtle">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                Gedung Direktorat Lt. 2
+              </div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h2 class="text-headline-sm font-headline-sm text-text-main group-hover:text-primary transition-colors">Ruang Sidang Utama</h2>
+<div class="flex items-center gap-2 mt-1 text-status-muted text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="groups">groups</span>
+<span>Kapasitas: <strong class="text-text-main">60 Kursi Eksekutif</strong></span>
+</div>
+<!-- Chips/Tags Fasilitas -->
+<div class="flex flex-wrap gap-1.5 mt-3.5">
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="mic">mic</span> Delegasi Mic
+                  </span>
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="videocam">videocam</span> Hybrid Conf PTZ
+                  </span>
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="ac_unit">ac_unit</span> AC Sentral
+                  </span>
+</div>
+</div>
+<div class="pt-3 border-t border-border-subtle flex flex-col gap-3">
+<div class="bg-page-canvas p-2.5 rounded-lg border border-border-subtle/60 flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-accent-warm mt-0.5 shrink-0" data-icon="receipt_long">receipt_long</span>
+<p class="text-caption font-caption text-status-muted leading-tight">
+                    Informasi tarif akan ditampilkan setelah diverifikasi pengelola
+                  </p>
+</div>
+<button class="w-full h-11 rounded-lg bg-surface-white border border-border-subtle hover:bg-brand-surface-tint hover:border-primary text-primary font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5 active:scale-[0.98]" type="button">
+<span>Lihat Detail</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 5: Auditorium Gedung Sakura -->
+<article class="bg-surface-white border border-border-subtle rounded-xl overflow-hidden hover:border-primary hover:shadow-md transition-all flex flex-col group">
+<div class="relative aspect-[16/9] w-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A tiered campus theater auditorium with comfortable cushioned seats, gentle acoustic step lighting, wooden presentation dais with floral decor, state-of-the-art audiovisual projector, deep forest green institutional styling, bright and dignified university hall atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrAaa1NJPpMqh2f0rXGhXLkz6vif0gn9yOIAK8yZMDqTZTi2F4GJp8sBhLJVKMxg7mcKsC8BgWnxuuA0eyS71PHpkn8mYGTlfoBO5a87BUwpffkoAzYqIgXtP2hw7qzd3Bzyg9Lw1CLCn63uwifeBdmkxwi5fLWN8rqiK0TLeEdbq966JsijOVfhTf6xwTDsufq28TE7v3Co4KH4F4juMn4ZW8_b0cPMETwKmqktc"/>
+<div class="absolute top-3 right-3">
+<span class="inline-flex items-center gap-1.5 h-[26px] px-2.5 rounded-full text-[12px] font-semibold bg-status-success-surface text-status-success shadow-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span>
+                  Tersedia
+                </span>
+</div>
+<div class="absolute bottom-3 left-3 bg-surface-white/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-caption font-caption text-primary flex items-center gap-1.5 border border-border-subtle">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                Gedung Sakura Lt. 3
+              </div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h2 class="text-headline-sm font-headline-sm text-text-main group-hover:text-primary transition-colors">Auditorium Gedung Sakura</h2>
+<div class="flex items-center gap-2 mt-1 text-status-muted text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="groups">groups</span>
+<span>Kapasitas: <strong class="text-text-main">250 Peserta</strong></span>
+</div>
+<!-- Chips/Tags Fasilitas -->
+<div class="flex flex-wrap gap-1.5 mt-3.5">
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="mic">mic</span> Sound Theater
+                  </span>
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="light">light</span> Lighting Panggung
+                  </span>
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="ac_unit">ac_unit</span> Full AC
+                  </span>
+</div>
+</div>
+<div class="pt-3 border-t border-border-subtle flex flex-col gap-3">
+<div class="bg-page-canvas p-2.5 rounded-lg border border-border-subtle/60 flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-accent-warm mt-0.5 shrink-0" data-icon="receipt_long">receipt_long</span>
+<p class="text-caption font-caption text-status-muted leading-tight">
+                    Informasi tarif akan ditampilkan setelah diverifikasi pengelola
+                  </p>
+</div>
+<button class="w-full h-11 rounded-lg bg-surface-white border border-border-subtle hover:bg-brand-surface-tint hover:border-primary text-primary font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5 active:scale-[0.98]" type="button">
+<span>Lihat Detail</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 6: Ruang Workshop & Seminar Pascasarjana -->
+<article class="bg-surface-white border border-border-subtle rounded-xl overflow-hidden hover:border-primary hover:shadow-md transition-all flex flex-col group">
+<div class="relative aspect-[16/9] w-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A flexible modern campus workshop seminar room with modular white tables, rolling ergonomic office chairs, wide whiteboard walls, ceiling mounted laser projector, glass windows with garden campus view, bright clean collegiate interior designed for academic productivity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCROud5Yu2PB0ZxXOHGQNC1c60pe_z3W2QGxY4HNzKMIGV6DXhLdx1CmR4TU2o53QFg5LW0Yl68TVEMxpy8Um7cQTBBMacJ8nNBL57uWqF6QACG7DXbkkmAvvvLijkJ-d53R4MoTKhQENwKz4aUtvNx86agUBavMVyJmm5yY2_YEiKzUqP6GFXPWwtToGp3QfncrIG2GGsmDuwG19vJAvEbvekZOZkEejIT4uuaMbE"/>
+<div class="absolute top-3 right-3">
+<span class="inline-flex items-center gap-1.5 h-[26px] px-2.5 rounded-full text-[12px] font-semibold bg-status-success-surface text-status-success shadow-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span>
+                  Tersedia
+                </span>
+</div>
+<div class="absolute bottom-3 left-3 bg-surface-white/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-caption font-caption text-primary flex items-center gap-1.5 border border-border-subtle">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                Gedung Pascasarjana Lt. 1
+              </div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h2 class="text-headline-sm font-headline-sm text-text-main group-hover:text-primary transition-colors">Ruang Workshop Pascasarjana</h2>
+<div class="flex items-center gap-2 mt-1 text-status-muted text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="groups">groups</span>
+<span>Kapasitas: <strong class="text-text-main">75 Peserta</strong></span>
+</div>
+<!-- Chips/Tags Fasilitas -->
+<div class="flex flex-wrap gap-1.5 mt-3.5">
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="draw">draw</span> Smart Board
+                  </span>
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="wifi">wifi</span> High-Speed WiFi
+                  </span>
+<span class="inline-flex items-center gap-1 bg-brand-surface-tint text-primary text-[11px] font-medium px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]" data-icon="ac_unit">ac_unit</span> Split AC
+                  </span>
+</div>
+</div>
+<div class="pt-3 border-t border-border-subtle flex flex-col gap-3">
+<div class="bg-page-canvas p-2.5 rounded-lg border border-border-subtle/60 flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-accent-warm mt-0.5 shrink-0" data-icon="receipt_long">receipt_long</span>
+<p class="text-caption font-caption text-status-muted leading-tight">
+                    Informasi tarif akan ditampilkan setelah diverifikasi pengelola
+                  </p>
+</div>
+<button class="w-full h-11 rounded-lg bg-surface-white border border-border-subtle hover:bg-brand-surface-tint hover:border-primary text-primary font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5 active:scale-[0.98]" type="button">
+<span>Lihat Detail</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination Bar -->
+<div class="mt-8 pt-4 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4">
+<p class="text-body-sm font-body-sm text-status-muted">
+            Menampilkan <strong class="text-text-main">1 - 6</strong> dari <strong class="text-text-main">6</strong> total fasilitas kampus
+          </p>
+<div class="inline-flex items-center gap-1">
+<button class="h-10 px-3 rounded-lg border border-border-subtle bg-surface-white text-status-muted opacity-50 cursor-not-allowed flex items-center justify-center" disabled="">
+<span class="material-symbols-outlined text-[18px]" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="h-10 w-10 rounded-lg bg-primary text-surface-white font-label-md text-label-md flex items-center justify-center shadow-xs">
+              1
+            </button>
+<button class="h-10 px-3 rounded-lg border border-border-subtle bg-surface-white text-status-muted opacity-50 cursor-not-allowed flex items-center justify-center" disabled="">
+<span class="material-symbols-outlined text-[18px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Procedural Help Callout Bento Card -->
+<section class="mt-4 bg-surface-white border border-border-subtle rounded-xl p-6 lg:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-brand-surface-tint text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]" data-icon="help_center">help_center</span>
+</div>
+<div>
+<h2 class="text-headline-sm font-headline-sm text-primary">Butuh Pendampingan Khusus atau Peminjaman Multi-Gedung?</h2>
+<p class="text-status-muted text-body-sm font-body-sm mt-1 max-w-2xl">
+            Untuk kegiatan berskala nasional, konferensi ilmiah fakultas, atau penyewaan jangka panjang oleh pihak eksternal, silakan hubungi tim UPT Pemeliharaan dan Sarana Prasarana Kampus.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 w-full md:w-auto">
+<button class="flex-1 md:flex-initial h-11 px-5 rounded-lg border border-border-subtle bg-surface-white hover:bg-brand-surface-tint text-primary font-label-md text-label-md transition-colors flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="support_agent">support_agent</span>
+          Kontak Pengelola UPT
+        </button>
+</div>
+</section>
+</main>
+<!-- Institutional Footer Shared Component -->
+<footer class="docked full-width bottom w-full bg-page-canvas dark:bg-inverse-surface border-t border-border-subtle dark:border-outline-variant mt-12">
+<div class="max-w-[1200px] mx-auto px-4 lg:px-6 py-12 flex flex-col gap-8 w-full">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-[24px]" data-icon="domain">domain</span>
+<span class="text-headline-sm font-headline-sm text-primary dark:text-inverse-primary">VenueConnect Polinela</span>
+</div>
+<p class="text-body-sm font-body-sm text-status-muted max-w-md">
+            Sistem Informasi Pengelolaan, Reservasi, dan Penjadwalan Fasilitas Gedung Resmi Terpadu Politeknik Negeri Lampung.
+          </p>
+</div>
+<div class="flex flex-wrap gap-x-6 gap-y-2 text-body-sm font-body-sm">
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none rounded" href="#">Panduan Penggunaan</a>
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none rounded" href="#">Kebijakan Privasi</a>
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none rounded" href="#">Ketentuan Layanan</a>
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none rounded" href="#">Kontak Pengelola UPT</a>
+<a class="text-status-muted dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none rounded" href="#">Peta Kampus</a>
+</div>
+</div>
+<div class="border-t border-border-subtle pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+<p class="text-caption font-caption text-status-muted">
+          © 2024 Politeknik Negeri Lampung (Polinela). Hak Cipta Dilindungi Undang-Undang. Pengelolaan Fasilitas &amp; Gedung Kampus Terpadu.
+        </p>
+<div class="flex items-center gap-4 text-caption text-status-muted">
+<span class="inline-flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-status-success inline-block"></span>
+            Server Terkoneksi (WIB)
+          </span>
+</div>
+</div>
+</div>
+</footer>
+  <script src="../prototype-nav.js" defer></script>
+</body></html>

@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jadwal Operasional &amp; Serah-Terima Fasilitas - VenueConnect Polinela</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary": "#034436",
+            "on-secondary": "#ffffff",
+            "surface-variant": "#d8e4f1",
+            "on-secondary-fixed-variant": "#2a4d44",
+            "secondary-fixed-dim": "#a8cfc2",
+            "primary-container": "#245c4d",
+            "surface-container-low": "#ebf5ff",
+            "status-muted-surface": "#F3F4F6",
+            "page-canvas": "#F6F8F7",
+            "on-tertiary-fixed-variant": "#005140",
+            "status-success": "#0E6245",
+            "on-secondary-container": "#466a5f",
+            "surface": "#f6f9ff",
+            "status-success-surface": "#DEF7EC",
+            "on-primary-fixed": "#002018",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#404945",
+            "on-secondary-fixed": "#002019",
+            "border-subtle": "#D8E0E5",
+            "surface-white": "#FFFFFF",
+            "surface-dim": "#cfdbe8",
+            "accent-warm": "#B7791F",
+            "inverse-primary": "#99d2bf",
+            "secondary-fixed": "#c4ebde",
+            "status-info": "#1E429F",
+            "surface-bright": "#f6f9ff",
+            "status-warning": "#8F4B0E",
+            "on-primary-container": "#99d2bf",
+            "surface-container": "#e3effc",
+            "on-error": "#ffffff",
+            "on-primary": "#ffffff",
+            "status-info-surface": "#EBF5FF",
+            "status-warning-surface": "#FEF08A",
+            "inverse-on-surface": "#e6f2ff",
+            "tertiary-container": "#0f5e4b",
+            "primary-fixed-dim": "#99d2bf",
+            "brand-surface-tint": "#E8F2EE",
+            "status-muted": "#4B5563",
+            "inverse-surface": "#26323b",
+            "secondary": "#42655b",
+            "secondary-container": "#c1e8db",
+            "on-surface": "#111d26",
+            "outline-variant": "#bfc9c4",
+            "outline": "#707975",
+            "status-danger": "#9B1C1C",
+            "surface-container-high": "#ddeaf7",
+            "surface-tint": "#316858",
+            "text-main": "#1F2933",
+            "primary-fixed": "#b5eedb",
+            "tertiary-fixed": "#a9f1d8",
+            "error-container": "#ffdad6",
+            "surface-container-highest": "#d8e4f1",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#8ed4bc",
+            "on-primary-fixed-variant": "#155041",
+            "on-background": "#111d26",
+            "on-error-container": "#93000a",
+            "background": "#f6f9ff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed": "#002018",
+            "accent-warm-surface": "#FFF4D6",
+            "status-danger-surface": "#FDE8E8",
+            "tertiary": "#004536",
+            "on-tertiary-container": "#8ed5bd"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "1rem",
+            "margin": "2rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "margin-mobile": "1rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Inter"],
+            "headline-xl-mobile": ["Inter"],
+            "headline-xl": ["Inter"],
+            "headline-lg-mobile": ["Inter"],
+            "label-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "caption": ["Inter"],
+            "headline-sm": ["Inter"],
+            "headline-md": ["Inter"],
+            "headline-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "body-lg-medium": ["Inter"],
+            "body-sm-medium": ["Inter"]
+          },
+          "fontSize": {
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-lg-medium": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "body-sm-medium": ["14px", { "lineHeight": "20px", "fontWeight": "500" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-page-canvas text-text-main font-body-sm antialiased min-h-screen flex flex-col selection:bg-brand-surface-tint selection:text-primary">
+<!-- ================= TOP APP BAR (Shared Component JSON) ================= -->
+<header class="bg-surface-white docked full-width top-0 sticky z-50 shadow-sm border-b border-border-subtle">
+<div class="max-w-[1200px] mx-auto px-4 lg:px-6 h-16 flex items-center justify-between w-full">
+<!-- Brand & Product Name -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[24px]">domain_verification</span>
+</div>
+<div>
+<a class="text-headline-sm font-headline-sm text-primary tracking-tight block" href="#">
+            VenueConnect Polinela
+          </a>
+<span class="text-caption font-caption text-status-muted block -mt-1 hidden sm:block">UPT Sarana &amp; Prasarana Terpadu</span>
+</div>
+</div>
+<!-- Navigation Links (Active mapping: 'Jadwal') -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-text-main hover:text-primary font-body-sm-medium text-body-sm-medium hover:bg-brand-surface-tint transition-colors duration-150 px-2 py-1 rounded" href="#">
+          Gedung
+        </a>
+<a class="text-primary border-b-2 border-primary font-body-lg-medium text-body-lg-medium pb-1" href="#">
+          Jadwal
+        </a>
+<a class="text-text-main hover:text-primary font-body-sm-medium text-body-sm-medium hover:bg-brand-surface-tint transition-colors duration-150 px-2 py-1 rounded" href="#">
+          Prosedur
+        </a>
+<a class="text-text-main hover:text-primary font-body-sm-medium text-body-sm-medium hover:bg-brand-surface-tint transition-colors duration-150 px-2 py-1 rounded" href="#">
+          Bantuan/AI
+        </a>
+</nav>
+<!-- Trailing Icon Actions & Primary Masuk -->
+<div class="flex items-center gap-3">
+<button aria-label="Notifikasi Operasional" class="w-10 h-10 rounded-lg flex items-center justify-center text-status-muted hover:text-primary hover:bg-brand-surface-tint relative transition-colors duration-150 active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-status-danger ring-2 ring-surface-white"></span>
+</button>
+<button aria-label="Bantuan dan Panduan" class="w-10 h-10 rounded-lg flex items-center justify-center text-status-muted hover:text-primary hover:bg-brand-surface-tint transition-colors duration-150 active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[20px]">help</span>
+</button>
+<div class="h-6 w-px bg-border-subtle hidden sm:block"></div>
+<!-- Trailing Primary Action button or Staff Profile -->
+<div class="flex items-center gap-2 pl-1">
+<div class="flex items-center gap-2 bg-brand-surface-tint px-2.5 py-1.5 rounded-lg border border-border-subtle">
+<span class="material-symbols-outlined text-primary text-[20px]">badge</span>
+<div class="text-left leading-tight hidden lg:block">
+<span class="text-label-sm font-label-sm text-primary block">Ahmad Fauzi</span>
+<span class="text-caption font-caption text-status-muted block">Petugas Jaga GSG</span>
+</div>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded-lg hover:bg-primary-container active:scale-[0.98] transition-transform duration-100 hidden sm:inline-flex items-center justify-center" type="button">
+            Masuk
+          </button>
+</div>
+</div>
+</div>
+</header>
+<!-- ================= SUB-HEADER OPERASIONAL UPT SARPRAS ================= -->
+<section class="bg-surface-white border-b border-border-subtle">
+<div class="max-w-[1200px] mx-auto px-4 lg:px-6 py-2.5 flex flex-wrap items-center justify-between gap-3 text-body-sm">
+<div class="flex items-center gap-4 flex-wrap">
+<!-- Live Synchronized WIB Server Time Indicator -->
+<div class="inline-flex items-center gap-2 bg-status-success-surface text-status-success font-label-sm text-label-sm px-2.5 py-1 rounded-full">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-status-success opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-status-success"></span>
+</span>
+<span>Waktu Server WIB Sinkron: <strong class="font-semibold" id="clock-wib">08:14:22 WIB</strong></span>
+</div>
+<span class="text-border-subtle hidden sm:inline">|</span>
+<div class="flex items-center gap-1.5 text-status-muted font-body-sm">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Kampus Terpadu Polinela, Bandar Lampung</span>
+</div>
+</div>
+<!-- Mode Selector Switch: Petugas Lapangan vs Pengelola UPT -->
+<div class="flex items-center gap-2 bg-page-canvas p-1 rounded-lg border border-border-subtle">
+<button class="bg-primary text-on-primary text-label-sm font-label-sm px-3 py-1 rounded-md shadow-sm transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">handyman</span>
+<span>Mode Petugas Lapangan</span>
+</button>
+<button class="text-status-muted hover:text-text-main text-label-sm font-label-sm px-3 py-1 rounded-md transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">admin_panel_settings</span>
+<span>Pengelola UPT</span>
+</button>
+</div>
+</div>
+</section>
+<!-- ================= MAIN CONTENT CANVAS ================= -->
+<main class="flex-grow max-w-[1200px] mx-auto px-4 lg:px-6 py-6 w-full flex flex-col gap-6">
+<!-- Breadcrumb Hierarchy -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-label-sm font-label-sm text-status-muted">
+<a class="hover:text-primary hover:underline" href="#">Portal Operasional</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-text-main font-semibold">Jadwal &amp; Serah-Terima Kunci</span>
+</nav>
+<!-- Page Title & Operational Action Buttons -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-2 border-b border-border-subtle">
+<div>
+<h1 class="text-headline-lg font-headline-lg text-primary tracking-tight">
+          Jadwal Tugas Operasional &amp; Serah-Terima Gedung
+        </h1>
+<p class="text-body-sm font-body-sm text-status-muted mt-1 max-w-3xl">
+          Kelola ketersediaan fisik, serah-terima kunci, pemeriksaan inventaris, dan checklist pemakaian sarana kampus.
+        </p>
+</div>
+<div class="flex items-center gap-3 shrink-0 flex-wrap">
+<button class="min-h-[44px] px-4 rounded-lg border border-border-subtle text-text-main bg-surface-white hover:bg-brand-surface-tint hover:text-primary text-label-md font-label-md transition-colors flex items-center gap-2 shadow-sm active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Cetak Lembar Kontrol Harian</span>
+</button>
+<button class="min-h-[44px] px-5 rounded-lg bg-primary hover:bg-[#173B32] text-on-primary text-label-md font-label-md transition-colors flex items-center gap-2 shadow-sm active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+<span>+ Blokir Pemeliharaan Rutin</span>
+</button>
+</div>
+</div>
+<!-- Metrik Status Operasional Hari Ini (Bento 4-Column Metric Cards) -->
+<section aria-label="Metrik Status Hari Ini" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Metric 1: Gedung Digunakan -->
+<div class="bg-surface-white border border-border-subtle rounded-xl p-5 shadow-sm hover:border-primary transition-colors flex items-start justify-between">
+<div class="flex flex-col gap-1">
+<span class="text-caption font-caption text-status-muted uppercase tracking-wider font-semibold">Aktif Hari Ini</span>
+<div class="flex items-baseline gap-2">
+<span class="text-headline-xl font-headline-xl text-primary font-bold">4</span>
+<span class="text-label-sm font-label-sm text-status-muted">Gedung Digunakan</span>
+</div>
+<span class="text-caption font-caption text-status-success flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+            Kapasitas terisi 82%
+          </span>
+</div>
+<div class="w-11 h-11 rounded-lg bg-brand-surface-tint text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">apartment</span>
+</div>
+</div>
+<!-- Metric 2: Serah-Terima Kunci Pending -->
+<div class="bg-surface-white border border-border-subtle rounded-xl p-5 shadow-sm hover:border-primary transition-colors flex items-start justify-between">
+<div class="flex flex-col gap-1">
+<span class="text-caption font-caption text-status-muted uppercase tracking-wider font-semibold">Prosedur Kunci</span>
+<div class="flex items-baseline gap-2">
+<span class="text-headline-xl font-headline-xl text-accent-warm font-bold">2</span>
+<span class="text-label-sm font-label-sm text-status-muted">Menunggu Konfirmasi</span>
+</div>
+<span class="text-caption font-caption text-accent-warm flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">vpn_key</span>
+            Aula Pasca &amp; Lab Terpadu
+          </span>
+</div>
+<div class="w-11 h-11 rounded-lg bg-accent-warm-surface text-accent-warm flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">key_vertical</span>
+</div>
+</div>
+<!-- Metric 3: Pemeriksaan Pasca-Acara -->
+<div class="bg-surface-white border border-border-subtle rounded-xl p-5 shadow-sm hover:border-primary transition-colors flex items-start justify-between">
+<div class="flex flex-col gap-1">
+<span class="text-caption font-caption text-status-muted uppercase tracking-wider font-semibold">Checklist Sarpras</span>
+<div class="flex items-baseline gap-2">
+<span class="text-headline-xl font-headline-xl text-status-info font-bold">1</span>
+<span class="text-label-sm font-label-sm text-status-muted">Pemeriksaan Pasca-Acara</span>
+</div>
+<span class="text-caption font-caption text-status-info flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">checklist_rtl</span>
+            Auditorium CB lt. 3
+          </span>
+</div>
+<div class="w-11 h-11 rounded-lg bg-status-info-surface text-status-info flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">fact_check</span>
+</div>
+</div>
+<!-- Metric 4: Pemeliharaan Aktif -->
+<div class="bg-surface-white border border-border-subtle rounded-xl p-5 shadow-sm hover:border-primary transition-colors flex items-start justify-between">
+<div class="flex flex-col gap-1">
+<span class="text-caption font-caption text-status-muted uppercase tracking-wider font-semibold">Sanitasi &amp; Perawatan</span>
+<div class="flex items-baseline gap-2">
+<span class="text-headline-xl font-headline-xl text-status-danger font-bold">1</span>
+<span class="text-label-sm font-label-sm text-status-muted">Pemeliharaan Aktif</span>
+</div>
+<span class="text-caption font-caption text-status-muted flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">engineering</span>
+            Sterilisasi AC Sentral GSG
+          </span>
+</div>
+<div class="w-11 h-11 rounded-lg bg-status-danger-surface text-status-danger flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">hvac</span>
+</div>
+</div>
+</section>
+<!-- Operational View Tabs -->
+<div class="border-b border-border-subtle flex items-center justify-between overflow-x-auto gap-4">
+<div class="flex items-center gap-8 -mb-px">
+<button class="text-status-muted hover:text-text-main font-body-sm-medium text-body-sm-medium py-3 px-1 border-b-2 border-transparent transition-colors flex items-center gap-2 whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span>Agenda Tugas Hari Ini (WIB)</span>
+</button>
+<button class="text-primary font-body-lg-medium text-body-lg-medium py-3 px-1 border-b-2 border-primary transition-colors flex items-center gap-2 whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-[20px]">vpn_key</span>
+<span>Pencatatan Serah-Terima Kunci</span>
+<span class="bg-brand-surface-tint text-primary text-label-sm font-label-sm px-2 py-0.5 rounded-full">2</span>
+</button>
+<button class="text-status-muted hover:text-text-main font-body-sm-medium text-body-sm-medium py-3 px-1 border-b-2 border-transparent transition-colors flex items-center gap-2 whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-[18px]">event_busy</span>
+<span>Blokir Jadwal Operasional</span>
+</button>
+</div>
+<div class="hidden sm:flex items-center gap-2 pb-2">
+<span class="text-caption font-caption text-status-muted">Filter Gedung:</span>
+<select class="bg-surface-white border border-border-subtle rounded-lg text-body-sm font-body-sm text-text-main px-3 py-1.5 focus:border-primary focus:ring-1 focus:ring-primary">
+<option>Semua Gedung Kampus</option>
+<option>Gedung Serba Guna (GSG)</option>
+<option>Aula Pascasarjana</option>
+<option>Gedung Jurusan CB</option>
+</select>
+</div>
+</div>
+<!-- Asymmetric Operational Grid: Main Dossier (8 cols) & Fast Handover Sidebar (4 cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- ================= KONTEN UTAMA: KARTU TUGAS & SERAH TERIMA (8 Kolom) ================= -->
+<section class="lg:col-span-8 flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<h2 class="text-headline-md font-headline-md text-text-main flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">assignment</span>
+<span>Antrean Serah-Terima &amp; Pengecekan Fasilitas</span>
+</h2>
+<span class="text-label-sm font-label-sm text-status-muted">Total: 2 Penugasan Prioritas</span>
+</div>
+<!-- Task Card 1: REQ-2024-1108 (GSG Polinela) -->
+<article class="bg-surface-white border border-border-subtle rounded-xl p-5 md:p-6 shadow-sm hover:border-primary transition-all flex flex-col gap-4">
+<!-- Card Header & Badge Status -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-border-subtle">
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded bg-brand-surface-tint text-primary font-mono text-label-sm font-semibold border border-border-subtle">
+                REQ-2024-1108
+              </span>
+<div class="inline-flex items-center gap-1.5 h-[26px] px-2.5 rounded-full text-label-sm font-label-sm bg-status-success-surface text-status-success">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Kunci Diserahkan</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-status-muted text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Hari ini, 08:30 - 16:00 WIB</span>
+</div>
+</div>
+<!-- Main Event & Venue Information -->
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+<div class="flex-grow">
+<h3 class="text-headline-sm font-headline-sm text-text-main font-semibold">
+                Seminar Nasional Robotika &amp; Otomasi Pertanian 2024
+              </h3>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-4 text-body-sm font-body-sm text-status-muted mt-1.5">
+<span class="flex items-center gap-1 text-primary font-medium">
+<span class="material-symbols-outlined text-[16px]">apartment</span>
+                  GSG Polinela (Lantai Utama &amp; Panggung)
+                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">group</span>
+                  Estimasi 450 Peserta
+                </span>
+</div>
+</div>
+</div>
+<!-- PIC / Pemohon Info Banner -->
+<div class="bg-page-canvas rounded-lg p-3.5 border border-border-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-body-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-label-sm">
+                UR
+              </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-semibold text-text-main">UKM Riset &amp; Rekayasa Mahasiswa</span>
+<span class="inline-flex items-center gap-0.5 text-caption font-caption text-status-success bg-status-success-surface px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+                    Terverifikasi
+                  </span>
+</div>
+<span class="text-caption font-caption text-status-muted block">Narahubung: kanal dukungan belum ditetapkan</span>
+</div>
+</div>
+<div class="text-right sm:text-right text-caption font-caption text-status-muted">
+<span class="block font-medium text-text-main">Penyerahan Kunci:</span>
+<span>07:45 WIB oleh Petugas Ahmad Fauzi</span>
+</div>
+</div>
+<!-- Facility Checklist Status Pills -->
+<div>
+<span class="text-label-sm font-label-sm text-status-muted block mb-2 font-medium">Kondisi Fasilitas Terverifikasi Pra-Acara:</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+<div class="flex items-center gap-2 bg-brand-surface-tint p-2 rounded-lg border border-border-subtle text-text-main text-body-sm">
+<span class="material-symbols-outlined text-status-success text-[18px]">volume_up</span>
+<div class="leading-tight">
+<span class="text-label-sm font-semibold block">Audio 5000W</span>
+<span class="text-caption text-status-success">Normal OK (4 Mic Wireless)</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-brand-surface-tint p-2 rounded-lg border border-border-subtle text-text-main text-body-sm">
+<span class="material-symbols-outlined text-status-success text-[18px]">videocam</span>
+<div class="leading-tight">
+<span class="text-label-sm font-semibold block">Proyektor Laser</span>
+<span class="text-caption text-status-success">HDMI OK &amp; Layar Tengah</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-brand-surface-tint p-2 rounded-lg border border-border-subtle text-text-main text-body-sm">
+<span class="material-symbols-outlined text-status-success text-[18px]">chair</span>
+<div class="leading-tight">
+<span class="text-label-sm font-semibold block">450 Kursi Siap</span>
+<span class="text-caption text-status-success">Layout Teater Rapi</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="pt-3 border-t border-border-subtle flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2 text-caption font-caption text-status-muted">
+<span class="material-symbols-outlined text-[16px] text-accent-warm">info</span>
+<span>Acara sedang berlangsung. Jadwal pengembalian inventaris: 16:30 WIB.</span>
+</div>
+<button class="min-h-[44px] px-4 rounded-lg bg-primary hover:bg-[#173B32] text-on-primary text-label-md font-label-md transition-colors flex items-center gap-2 shadow-sm active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+<span>Catat Pengembalian &amp; Periksa Kondisi Gedung</span>
+</button>
+</div>
+</article>
+<!-- Task Card 2: REQ-2024-1109 (Aula Pascasarjana) -->
+<article class="bg-surface-white border border-border-subtle rounded-xl p-5 md:p-6 shadow-sm hover:border-primary transition-all flex flex-col gap-4">
+<!-- Card Header & Badge Status -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-border-subtle">
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded bg-brand-surface-tint text-primary font-mono text-label-sm font-semibold border border-border-subtle">
+                REQ-2024-1109
+              </span>
+<div class="inline-flex items-center gap-1.5 h-[26px] px-2.5 rounded-full text-label-sm font-label-sm bg-status-warning-surface text-status-warning font-semibold">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span>
+<span>Menunggu Penyerahan Kunci</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-status-muted text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Hari ini, 09:00 - 12:30 WIB (Mulai 45 menit lagi)</span>
+</div>
+</div>
+<!-- Main Event & Venue Information -->
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+<div class="flex-grow">
+<h3 class="text-headline-sm font-headline-sm text-text-main font-semibold">
+                Kuliah Umum Akuntansi Sektor Publik: Tata Kelola Keuangan
+              </h3>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-4 text-body-sm font-body-sm text-status-muted mt-1.5">
+<span class="flex items-center gap-1 text-primary font-medium">
+<span class="material-symbols-outlined text-[16px]">apartment</span>
+                  Aula Pascasarjana Polinela (Lantai 2)
+                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">group</span>
+                  Kapasitas 120 Orang
+                </span>
+</div>
+</div>
+</div>
+<!-- PIC Info Banner -->
+<div class="bg-page-canvas rounded-lg p-3.5 border border-border-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-body-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-primary flex items-center justify-center font-bold text-label-sm">
+                JA
+              </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-semibold text-text-main">Jurusan Ekonomi &amp; Bisnis / D3 Akuntansi</span>
+<span class="inline-flex items-center gap-0.5 text-caption font-caption text-status-info bg-status-info-surface px-1.5 py-0.5 rounded">
+                    Sivitas Akademika
+                  </span>
+</div>
+<span class="text-caption font-caption text-status-muted block">Koordinator: Hendra Gunawan, S.E., M.Ak. (0821-8844-3112)</span>
+</div>
+</div>
+<div class="text-right sm:text-right text-caption font-caption">
+<span class="block font-medium text-status-warning">Status Fisik Ruangan:</span>
+<span class="text-status-success font-semibold">Telah dibersihkan tim kebersihan (07:30 WIB)</span>
+</div>
+</div>
+<!-- Required Facility Checklist -->
+<div class="bg-[#FCFDFD] p-3 rounded-lg border border-dashed border-border-subtle">
+<div class="text-label-sm font-semibold text-text-main mb-1">Permintaan Sarana Khusus Terverifikasi:</div>
+<div class="text-body-sm text-status-muted flex flex-wrap gap-x-4 gap-y-1">
+<span>• 3 Mic Wireless Podium</span>
+<span>• Split AC Ruangan 4 Unit</span>
+<span>• Smart TV 75 inch &amp; Pointer Presentasi</span>
+<span>• 120 Kursi Kuliah Lipat</span>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="pt-3 border-t border-border-subtle flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2 text-caption font-caption text-status-danger font-medium">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>Peminjam sudah berada di lokasi. Lakukan verifikasi identitas fisik.</span>
+</div>
+<button class="min-h-[44px] px-5 rounded-lg bg-primary hover:bg-[#173B32] text-on-primary text-label-md font-label-md transition-colors flex items-center gap-2 shadow-sm active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px]">key</span>
+<span>Serahkan Kunci &amp; Catat Checklist Kelayakan</span>
+</button>
+</div>
+</article>
+<!-- Operational Quick History / Audit Trail Log Snippet -->
+<div class="bg-surface-white border border-border-subtle rounded-xl p-5 shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-headline-sm font-headline-sm text-text-main">
+              Log Aktivitas Serah-Terima Terakhir Hari Ini
+            </h3>
+<a class="text-label-sm font-label-sm text-primary hover:underline" href="#">Lihat Seluruh Log</a>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between py-2 border-b border-border-subtle text-body-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-status-success text-[20px]">key_off</span>
+<div>
+<span class="font-medium text-text-main">Pengembalian Kunci Gedung CB Lt. 3</span>
+<span class="text-caption text-status-muted block">Oleh Himpunan Mahasiswa Komputer | Petugas: Rahmat H.</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-semibold text-status-success">Kondisi Lengkap</span>
+<span class="text-caption text-status-muted block">07:20 WIB</span>
+</div>
+</div>
+<div class="flex items-center justify-between py-1 text-body-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-status-info text-[20px]">cleaning_services</span>
+<div>
+<span class="font-medium text-text-main">Pemeriksaan Pasca-Acara Workshop Jurusan Perkebunan</span>
+<span class="text-caption text-status-muted block">Ruang Rapat Utama Polinela | Catatan: Proyektor dimatikan rapi</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-semibold text-status-info">Selesai Cek</span>
+<span class="text-caption text-status-muted block">06:55 WIB</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= SIDEBAR OPERASIONAL: FORMULIR CEPAT CHECKLIST (4 Kolom) ================= -->
+<aside class="lg:col-span-4 bg-surface-white border border-border-subtle rounded-xl p-5 shadow-sm sticky top-20 flex flex-col gap-5">
+<!-- Sidebar Title Header -->
+<div class="pb-3 border-b border-border-subtle">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-brand-surface-tint text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+</span>
+<h2 class="text-headline-sm font-headline-sm text-text-main">
+                Formulir Cepat Serah-Terima
+              </h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-brand-surface-tint text-primary font-mono text-caption font-semibold">
+              LIVE INSPEKSI
+            </span>
+</div>
+<p class="text-caption font-caption text-status-muted mt-1.5">
+            Pencatatan langsung serah-terima fisik kunci &amp; sarana untuk gedung terpilih.
+          </p>
+</div>
+<form class="space-y-4">
+<!-- Target Pemesanan / Gedung -->
+<div>
+<label class="block text-label-sm font-label-sm text-text-main mb-1.5">
+              Pilih Target Kegiatan &amp; Gedung <span class="text-status-danger">*</span>
+</label>
+<select class="w-full min-h-[44px] bg-surface-white border border-border-subtle rounded-lg px-3.5 text-body-sm text-text-main focus:border-primary focus:ring-2 focus:ring-primary focus:outline-none">
+<option value="REQ-2024-1109">REQ-2024-1109 - Aula Pascasarjana (Kuliah Umum)</option>
+<option value="REQ-2024-1108">REQ-2024-1108 - GSG Polinela (Seminar Robotika)</option>
+<option value="REQ-2024-1110">REQ-2024-1110 - Lab Bahasa Kampus Utama</option>
+</select>
+</div>
+<!-- Jenis Prosedur Radio -->
+<div>
+<span class="block text-label-sm font-label-sm text-text-main mb-1.5">Jenis Tindakan Prosedural</span>
+<div class="grid grid-cols-2 gap-2">
+<label class="flex items-center gap-2.5 p-2.5 rounded-lg border border-primary bg-brand-surface-tint cursor-pointer">
+<input checked="" class="text-primary focus:ring-primary h-4 w-4" name="action_type" type="radio" value="handover"/>
+<span class="text-label-sm font-label-sm text-primary">Penyerahan Kunci</span>
+</label>
+<label class="flex items-center gap-2.5 p-2.5 rounded-lg border border-border-subtle bg-surface-white hover:bg-page-canvas cursor-pointer">
+<input class="text-primary focus:ring-primary h-4 w-4" name="action_type" type="radio" value="return"/>
+<span class="text-label-sm font-label-sm text-text-main">Pengembalian</span>
+</label>
+</div>
+</div>
+<!-- Checklist Fisik Sarana Prasarana (4 item wajib) -->
+<fieldset class="space-y-2.5 pt-1">
+<legend class="text-label-sm font-label-sm text-text-main font-semibold mb-1 block">
+              Parameter Inspeksi Standar UPT:
+            </legend>
+<!-- Item 1: Kebersihan Awal -->
+<label class="flex items-start gap-3 p-2.5 rounded-lg border border-border-subtle bg-[#FBFDFB] hover:bg-brand-surface-tint transition-colors cursor-pointer">
+<input checked="" class="mt-0.5 rounded border-border-subtle text-primary focus:ring-primary h-5 w-5" type="checkbox"/>
+<div class="leading-tight">
+<span class="text-body-sm-medium font-body-sm-medium text-text-main block">Kebersihan Ruang Awal</span>
+<span class="text-caption text-status-muted">Lantai disapu/dipel, tempat sampah kosong bersih</span>
+</div>
+</label>
+<!-- Item 2: Kelistrikan & AC -->
+<label class="flex items-start gap-3 p-2.5 rounded-lg border border-border-subtle bg-[#FBFDFB] hover:bg-brand-surface-tint transition-colors cursor-pointer">
+<input checked="" class="mt-0.5 rounded border-border-subtle text-primary focus:ring-primary h-5 w-5" type="checkbox"/>
+<div class="leading-tight">
+<span class="text-body-sm-medium font-body-sm-medium text-text-main block">Kelistrikan &amp; Pendingin (AC)</span>
+<span class="text-caption text-status-muted">4 Unit AC dingin, saklar MCB normal aman</span>
+</div>
+</label>
+<!-- Item 3: Sound System & Proyektor -->
+<label class="flex items-start gap-3 p-2.5 rounded-lg border border-border-subtle bg-[#FBFDFB] hover:bg-brand-surface-tint transition-colors cursor-pointer">
+<input checked="" class="mt-0.5 rounded border-border-subtle text-primary focus:ring-primary h-5 w-5" type="checkbox"/>
+<div class="leading-tight">
+<span class="text-body-sm-medium font-body-sm-medium text-text-main block">Sound System &amp; Multimedia</span>
+<span class="text-caption text-status-muted">Wireless mic berfungsi jernih, proyektor tajam</span>
+</div>
+</label>
+<!-- Item 4: Kunci Utama & Duplikat -->
+<label class="flex items-start gap-3 p-2.5 rounded-lg border border-border-subtle bg-[#FBFDFB] hover:bg-brand-surface-tint transition-colors cursor-pointer">
+<input checked="" class="mt-0.5 rounded border-border-subtle text-primary focus:ring-primary h-5 w-5" type="checkbox"/>
+<div class="leading-tight">
+<span class="text-body-sm-medium font-body-sm-medium text-text-main block">Fisik Kunci Diserahkan</span>
+<span class="text-caption text-status-muted">1 Kunci Master Gerbang + 1 Kunci Pintu Aula</span>
+</div>
+</label>
+</fieldset>
+<!-- Input Jumlah Kunci & Petugas Penerima -->
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block text-label-sm font-label-sm text-text-main mb-1">Jumlah Kunci</label>
+<input class="w-full min-h-[44px] bg-surface-white border border-border-subtle rounded-lg px-3.5 text-body-sm text-text-main focus:border-primary focus:ring-2 focus:ring-primary" type="number" value="2"/>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-text-main mb-1">ID Kartu Penerima</label>
+<input class="w-full min-h-[44px] bg-surface-white border border-border-subtle rounded-lg px-3.5 text-body-sm text-text-main focus:border-primary focus:ring-2 focus:ring-primary" type="text" value="Identitas disamarkan pada preview"/>
+</div>
+</div>
+<!-- Catatan Kondisi Lapangan -->
+<div>
+<label class="block text-label-sm font-label-sm text-text-main mb-1">
+              Catatan Kondisi Khusus / Pesan Serah-Terima
+            </label>
+<textarea class="w-full bg-surface-white border border-border-subtle rounded-lg p-3 text-body-sm text-text-main focus:border-primary focus:ring-2 focus:ring-primary" placeholder="Tuliskan catatan fisik sarana..." rows="2">Seluruh inventaris dalam keadaan utuh sebelum acara dimulai.</textarea>
+</div>
+<!-- Konfirmasi / Tanda Tangan Digital Petugas Jaga -->
+<div class="p-3 bg-page-canvas rounded-lg border border-border-subtle flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-text-main font-semibold">Tanda Tangan Digital Petugas</span>
+<span class="text-caption font-caption text-status-success font-medium">Terverifikasi PIN UPT</span>
+</div>
+<div class="bg-surface-white border border-dashed border-border-subtle rounded h-16 flex items-center justify-center text-status-muted text-caption italic">
+              [ Ahmad Fauzi - 198504122010121002 - UPT SARPRAS ]
+            </div>
+</div>
+<!-- Tombol Submit Prosedur -->
+<button class="w-full min-h-[44px] bg-primary hover:bg-[#173B32] text-on-primary font-label-md text-label-md rounded-lg flex items-center justify-center gap-2 transition-colors shadow-sm active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Konfirmasi &amp; Simpan Berita Acara</span>
+</button>
+<!-- Disclaimer Prosedural Polinela -->
+<p class="text-center text-caption font-caption text-status-muted">
+            Pencatatan ini berkekuatan hukum internal sesuai SOP Pemakaian Fasilitas Polinela No. 04/UPT-SP/2023.
+          </p>
+</form>
+</aside>
+</div>
+</main>
+<!-- ================= INSTITUTIONAL FOOTER (Shared Component JSON) ================= -->
+<footer class="bg-page-canvas docked full-width bottom w-full border-t border-border-subtle mt-12">
+<div class="max-w-[1200px] mx-auto px-4 lg:px-6 py-12 flex flex-col gap-8 w-full">
+<!-- Top Row: Logo, Info & Navigation Links -->
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-8">
+<div class="max-w-md">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-9 h-9 rounded-lg bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</div>
+<div class="text-headline-sm font-headline-sm text-primary tracking-tight">
+              VenueConnect Polinela
+            </div>
+</div>
+<p class="text-body-sm font-body-sm text-status-muted">
+            Sistem Tata Kelola Fasilitas, Peminjaman Gedung, dan Manajemen Operasional Terpadu Politeknik Negeri Lampung.
+          </p>
+<div class="mt-3 flex items-center gap-2 text-label-sm font-label-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+<span>Pusat Kendali UPT: Gd. Rektorat Lt. 1 | Telp: (0721) 703995</span>
+</div>
+</div>
+<!-- Institutional Links from JSON -->
+<nav aria-label="Tautan Institusional" class="flex flex-wrap gap-x-6 gap-y-2 text-body-sm font-body-sm">
+<a class="text-status-muted hover:text-primary hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none" href="#">
+            Panduan Penggunaan
+          </a>
+<a class="text-status-muted hover:text-primary hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none" href="#">
+            Kebijakan Privasi
+          </a>
+<a class="text-status-muted hover:text-primary hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none" href="#">
+            Ketentuan Layanan
+          </a>
+<a class="text-status-muted hover:text-primary hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none" href="#">
+            Kontak Pengelola UPT
+          </a>
+<a class="text-status-muted hover:text-primary hover:underline transition-all duration-150 focus:ring-2 focus:ring-primary focus:outline-none" href="#">
+            Peta Kampus
+          </a>
+</nav>
+</div>
+<!-- Bottom Row: Copyright text from JSON -->
+<div class="pt-6 border-t border-border-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-caption font-caption text-status-muted">
+<p>
+          © 2024 Politeknik Negeri Lampung (Polinela). Hak Cipta Dilindungi Undang-Undang. Pengelolaan Fasilitas &amp; Gedung Kampus Terpadu.
+        </p>
+<div class="flex items-center gap-4">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-status-success">security</span>
+            Koneksi Internal Kampus Aman (SSL 256-bit)
+          </span>
+<span>Versi Operasional 2.4.1</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Micro-interaction script for clock synchronization simulation -->
+<script>
+    (function updateWibTime() {
+      const clockEl = document.getElementById('clock-wib');
+      if (!clockEl) return;
+      function tick() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        clockEl.textContent = `${hours}:${minutes}:${seconds} WIB`;
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
+  <script src="../prototype-nav.js" defer></script>
+</body></html>

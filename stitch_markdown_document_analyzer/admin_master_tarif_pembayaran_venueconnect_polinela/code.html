@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kelola Gedung, Jadwal, dan Pembayaran — VenueConnect</title>
+  <style>
+    :root { font: 16px/1.5 system-ui, sans-serif; color: #14231d; background: #f3f7f5; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 32px 20px 120px; }
+    main { max-width: 1120px; margin: 0 auto; }
+    header, section { background: #fff; border: 1px solid #d5e1dc; border-radius: 14px; padding: 22px; margin: 0 0 18px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { font-size: clamp(1.6rem, 4vw, 2.25rem); }
+    h2 { font-size: 1.25rem; }
+    .notice { border-left: 4px solid #b45309; background: #fffbeb; padding: 12px 14px; color: #78350f; }
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    label { display: block; margin: 12px 0; font-weight: 650; }
+    input, select, textarea { display: block; width: 100%; min-height: 42px; margin-top: 5px; padding: 8px 10px; border: 1px solid #94a3b8; border-radius: 7px; background: #fff; color: #0f172a; font: inherit; }
+    input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible { outline: 3px solid #047857; outline-offset: 2px; }
+    button { min-height: 42px; border: 1px solid #64748b; border-radius: 7px; padding: 8px 14px; background: #f8fafc; color: #0f172a; font: inherit; font-weight: 700; }
+    button:disabled { cursor: not-allowed; opacity: .65; }
+    .empty { border: 1px dashed #94a3b8; border-radius: 8px; padding: 16px; color: #334155; background: #f8fafc; }
+    .tag { display: inline-block; border-radius: 999px; background: #e2e8f0; padding: 3px 9px; font-size: .82rem; font-weight: 700; }
+    .muted { color: #475569; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="tag">Preview operator</p>
+      <h1>Kelola gedung, tarif, jadwal, dan pembayaran</h1>
+      <p class="muted">Rancangan layar operator; data dan tindakan tidak tersambung ke sistem.</p>
+      <p class="notice"><strong>Belum untuk production.</strong> Tarif, syarat, nominal, metode pembayaran, pihak verifier, serta izin role belum disahkan. Layar menampilkan kolom kosong dan tindakan terkunci agar tidak membentuk kebijakan contoh.</p>
+    </header>
+
+    <section aria-labelledby="building-title">
+      <h2 id="building-title">Master gedung dan jadwal</h2>
+      <div class="grid">
+        <div>
+          <h3>Data gedung</h3>
+          <label>Nama gedung<input autocomplete="off" placeholder="Belum diisi" /></label>
+          <label>Kapasitas<input type="number" min="1" placeholder="Belum ditetapkan" /></label>
+          <label>Status<select><option>— Pilih status —</option><option>Aktif</option><option>Nonaktif</option></select></label>
+          <button type="button" disabled>Simpan perubahan</button>
+          <p class="muted">Aksi terkunci pada prototype statis. Admin development dapat mengelola data melalui aplikasi preview.</p>
+        </div>
+        <div>
+          <h3>Tarif resmi</h3>
+          <div class="empty" role="status">Belum ada tarif yang disahkan untuk ditampilkan.</div>
+          <label>Tarif<input inputmode="decimal" placeholder="Menunggu keputusan tarif" disabled /></label>
+          <label>Syarat penggunaan<textarea rows="3" placeholder="Menunggu syarat resmi" disabled></textarea></label>
+          <button type="button" disabled>Tambah tarif</button>
+        </div>
+        <div>
+          <h3>Blokir kalender</h3>
+          <label>Mulai<input type="datetime-local" /></label>
+          <label>Selesai<input type="datetime-local" /></label>
+          <label>Alasan<textarea rows="2" placeholder="Diisi operator berwenang"></textarea></label>
+          <button type="button" disabled>Simpan blokir</button>
+          <p class="muted">Preview tidak menyimpan blokir. Zona waktu produk belum ditetapkan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="payment-title">
+      <h2 id="payment-title">Antrean verifikasi pembayaran</h2>
+      <div class="empty" role="status">Tidak ada transaksi nyata pada prototype. Data pembayaran, nominal, bukti, tenggat, dan metode verifier tidak ditampilkan.</div>
+      <div class="grid" style="margin-top: 16px">
+        <label>Referensi transaksi<input placeholder="Akan diisi dari transaksi yang sah" disabled /></label>
+        <label>Hasil pemeriksaan<select disabled><option>Belum tersedia</option></select></label>
+      </div>
+      <button type="button" disabled>Verifikasi pembayaran</button>
+    </section>
+
+    <section aria-labelledby="handover-title">
+      <h2 id="handover-title">Serah-terima penggunaan</h2>
+      <p>Rancangan tindakan petugas dan checklist tersedia pada layar <a href="../operasional_serah_terima_venueconnect_polinela/code.html">serah-terima</a>. Assignment petugas dan prosedur operasional masih menunggu penetapan.</p>
+    </section>
+  </main>
+  <script src="../prototype-nav.js" defer></script>
+</body>
+</html>
